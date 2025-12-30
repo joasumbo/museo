@@ -1,0 +1,54 @@
+# Robots.txt - Museu Municipal de Alcanena
+# Otimizado para SEO e rastreamento do Google
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /storage/
+Disallow: /vendor/
+Disallow: /*.json$
+Disallow: /*?*print=
+Disallow: /*?*session=
+
+# Sitemap
+Sitemap: https://museu-alcanena.pt/sitemap.xml
+
+# Principais bots de pesquisa
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /assets/img/
+Allow: /assets/gallery/
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Bots de redes sociais
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Bloquear bots maliciosos e scrapers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
