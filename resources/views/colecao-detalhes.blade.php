@@ -1,41 +1,10 @@
-﻿<!doctype html>
-<html class="no-js" lang="pt">
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ $colecao['titulo'] }} - Museu Municipal de Alcanena</title>
-    <meta name="description" content="{{ $colecao['descricao_curta'] }}">
-    <meta name="robots" content="INDEX,FOLLOW">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+@section('title', $colecao['titulo'] . ' - Museu Municipal de Alcanena')
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" href="{{ asset('assets/img/Logo_MMA.png') }}">
-    <link rel="shortcut icon" href="{{ asset('assets/img/Logo_MMA.png') }}">
-    <meta name="msapplication-TileColor" content="#d4a574">
-    <meta name="msapplication-TileImage" content="{{ asset('assets/img/Logo_MMA.png') }}">
-    <meta name="theme-color" content="#d4a574">
+@section('description', $colecao['descricao_curta'])
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/slick.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-
-</head>
-
-<body>
-    @include('components.preloader')
-    @include('layouts.header')
-
-    <div id="smooth-wrapper">
-        <div id="smooth-content">
+@section('content')
 
         <!-- Hero da Coleção -->
         <div class="breadcumb-wrapper background-image" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ asset($colecao['imagem_hero']) }}'); padding: 180px 0 100px; background-position: center;">
@@ -161,112 +130,4 @@
                 </div>
             </div>
         </div>
-
-        @include('layouts.footer')
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
-    <script src="{{ asset('assets/js/gsap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/ScrollTrigger.min.js') }}"></script>
-    <script src="{{ asset('assets/js/smooth-scroll.js') }}"></script>
-    <script src="{{ asset('assets/js/main.js') }}"></script>
-    <script src="{{ asset('assets/js/odometer.min.js') }}"></script>
-    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
-
-    <script>
-        $(document).ready(function() {
-            // Inicializar galeria com Magnific Popup
-            $('.gallery-item').magnificPopup({
-                type: 'image',
-                gallery: {
-                    enabled: true,
-                    navigateByImgClick: true,
-                    preload: [0,1],
-                    arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
-                    tPrev: 'Anterior',
-                    tNext: 'Próxima',
-                    tCounter: '<span class="mfp-counter">%curr% de %total%</span>'
-                },
-                image: {
-                    titleSrc: 'title',
-                    verticalFit: true
-                },
-                mainClass: 'mfp-fade',
-                removalDelay: 300
-            });
-
-            // Hover effect nas imagens da galeria
-            $('.gallery-item').hover(
-                function() {
-                    $(this).find('img').css('transform', 'scale(1.1)');
-                    $(this).find('.overlay').css('opacity', '1');
-                },
-                function() {
-                    $(this).find('img').css('transform', 'scale(1)');
-                    $(this).find('.overlay').css('opacity', '0');
-                }
-            );
-        });
-    </script>
-
-    <style>
-        /* Estilos personalizados para o modal */
-        .mfp-fade.mfp-bg {
-            opacity: 0;
-            transition: all 0.3s ease-out;
-        }
-        .mfp-fade.mfp-bg.mfp-ready {
-            opacity: 0.95;
-            background: #1a1a1a;
-        }
-        .mfp-fade.mfp-wrap .mfp-content {
-            opacity: 0;
-            transition: all 0.3s ease-out;
-        }
-        .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-            opacity: 1;
-        }
-        
-        .mfp-counter {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            color: #fff;
-            font-size: 14px;
-            font-weight: 600;
-            background: rgba(212, 165, 116, 0.9);
-            padding: 8px 16px;
-            border-radius: 20px;
-        }
-        
-        .mfp-arrow {
-            width: 60px;
-            height: 60px;
-            background: rgba(212, 165, 116, 0.9);
-            border-radius: 50%;
-            opacity: 0.8;
-            transition: all 0.3s;
-        }
-        .mfp-arrow:hover {
-            opacity: 1;
-            background: #d4a574;
-            transform: scale(1.1);
-        }
-        
-        /* Link hover nas ouTrês coleções */
-        .widget ul li a:hover {
-            color: #d4a574 !important;
-        }
-        .widget ul li a:hover i {
-            transform: translateX(5px);
-            transition: transform 0.3s;
-        }
-    </style>
-</body>
-
-</html>
+@endsection

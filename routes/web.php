@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Event;
+use App\Models\Gallery;
 
 Route::get('/', function () {
     // Buscar próximos 3 eventos ativos, ordenados por data
@@ -11,7 +12,15 @@ Route::get('/', function () {
         ->limit(3)
         ->get();
     
-    return view('home', compact('upcomingEvents'));
+    // Buscar exposições em destaque
+    $featuredExhibitions = Event::where('is_active', true)
+        ->where('is_featured', true)
+        ->where('type', 'exhibition')
+        ->orderBy('start_date', 'desc')
+        ->limit(3)
+        ->get();
+    
+    return view('home', compact('upcomingEvents', 'featuredExhibitions'));
 })->name('home');
 
 Route::get('/sobre', function () {
@@ -19,7 +28,17 @@ Route::get('/sobre', function () {
 })->name('sobre');
 
 Route::get('/colecoes', function () {
-    return view('colecoes');
+    $galleries = Gallery::where('is_active', true)
+        ->orderBy('order', 'asc')
+        ->get();
+    
+    // Buscar galeria mais recente com imagem para o background
+    $latestGallery = Gallery::where('is_active', true)
+        ->whereNotNull('image')
+        ->orderBy('created_at', 'desc')
+        ->first();
+    
+    return view('colecoes', compact('galleries', 'latestGallery'));
 })->name('colecoes');
 
 Route::get('/colecoes/{slug}', function ($slug) {
@@ -201,93 +220,22 @@ Route::get('/galeria', function () {
 })->name('galeria');
 
 Route::get('/eventos', function () {
-    // Dados de exemplo - depois virá do banco de dados
-    $eventos_destaque = [
-        [
-            'slug' => 'exposicao-arqueologia-45mil-anos',
-            'titulo' => '45 Mil Anos de História',
-            'tipo' => 'Exposição Permanente',
-            'tipo_badge' => 'ARQUEOLOGIA',
-            'descricao_curta' => 'Viagem pelo tempo desde o Paleolítico até à Idade Moderna',
-            'imagem' => 'assets/img/gallery/DSC_3932.jpg',
-            'data' => 'Permanente',
-            'horario' => 'Horário do Museu'
-        ],
-        [
-            'slug' => 'curtumes-patrimonio-industrial',
-            'titulo' => 'Curtumes de Alcanena',
-            'tipo' => 'Exposição Permanente',
-            'tipo_badge' => 'INDÚSTRIA',
-            'descricao_curta' => 'A única coleção do país sobre a indústria dos curtumes',
-            'imagem' => 'assets/img/portfolio/mma_portfolio_2.jpg',
-            'data' => 'Permanente',
-            'horario' => 'Horário do Museu'
-        ],
-        [
-            'slug' => 'historia-local-tradicoes',
-            'titulo' => 'Tradições de Alcanena',
-            'tipo' => 'Exposição Permanente',
-            'tipo_badge' => 'ETNOGRAFIA',
-            'descricao_curta' => 'Da Rata Cega aos utensílios tradicionais de Minde',
-            'imagem' => 'assets/img/portfolio/mma_portfolio_3.jpg',
-            'data' => 'Permanente',
-            'horario' => 'Horário do Museu'
-        ],
-    ];
-
-    $proximos_eventos = [
-        [
-            'slug' => 'visita-guiada-familias',
-            'titulo' => 'Visitas Guiadas para Famílias',
-            'tipo' => 'Atividade Educativa',
-            'status' => 'Inscrições Abertas',
-            'status_color' => '#28a745',
-            'descricao_curta' => 'Descubra o museu em família com visitas guiadas interativas e atividades para crianças. Uma experiência cultural única para todas as idades.',
-            'imagem' => 'assets/img/gallery/DSC_3946.jpg',
-            'data' => 'Todos os Sábados',
-            'horario' => '10h00 - 12h00',
-            'local' => 'Museu Municipal'
-        ],
-        [
-            'slug' => 'workshop-arqueologia-escolas',
-            'titulo' => 'Workshop de Arqueologia',
-            'tipo' => 'Workshop Educativo',
-            'status' => 'Agendamento Necessário',
-            'status_color' => '#ffc107',
-            'descricao_curta' => 'Programa educativo para escolas com simulação de escavação arqueológica e manuseamento de réplicas de artefactos históricos.',
-            'imagem' => 'assets/img/gallery/DSC_3950.jpg',
-            'data' => 'Durante o Ano Letivo',
-            'horario' => 'Horário a combinar',
-            'local' => 'Sala Educativa'
-        ],
-        [
-            'slug' => 'noite-no-museu',
-            'titulo' => 'Noite no Museu',
-            'tipo' => 'Evento Especial',
-            'status' => 'Brevemente',
-            'status_color' => '#17a2b8',
-            'descricao_curta' => 'Evento especial noturno com visitas guiadas exclusivas, música ao vivo e experiências culturais únicas num ambiente intimista.',
-            'imagem' => 'assets/img/gallery/DSC_3958.jpg',
-            'data' => 'A anunciar',
-            'horario' => '20h00 - 23h00',
-            'local' => 'Museu Municipal'
-        ],
-        [
-            'slug' => 'encontro-memoria-curtumes',
-            'titulo' => 'Encontro Memória dos Curtumes',
-            'tipo' => 'Conferência',
-            'status' => null,
-            'status_color' => null,
-            'descricao_curta' => 'Sessão de partilha de memórias e testemunhos de antigos trabalhadores da indústria dos curtumes de Alcanena.',
-            'imagem' => 'assets/img/gallery/DSC_3961.jpg',
-            'data' => 'Trimestral',
-            'horario' => '15h00 - 17h00',
-            'local' => 'Auditório do Museu'
-        ],
-    ];
-
-    return view('eventos', compact('eventos_destaque', 'proximos_eventos'));
+    // Buscar todos os eventos ativos do banco de dados
+    $events = Event::where('is_active', true)
+        ->orderBy('start_date', 'desc')
+        ->get();
+    
+    return view('eventos', compact('events'));
 })->name('eventos');
+
+// Detalhes de Evento da BD (DEVE VIR ANTES das rotas com slug hardcoded)
+Route::get('/evento/{slug}', function ($slug) {
+    $event = Event::where('is_active', true)
+        ->where('slug', $slug)
+        ->firstOrFail();
+    
+    return view('evento-detalhes-bd', compact('event'));
+})->name('evento.detalhes.bd');
 
 Route::get('/eventos/{slug}', function ($slug) {
     // Todos os eventos disponíveis
@@ -479,16 +427,59 @@ Esta exposição pretende criar pontes entre gerações, permitindo que os mais 
     return view('evento-detalhes', compact('evento', 'outros_eventos'));
 })->name('evento.detalhes');
 
-// Detalhes de Evento da BD
-Route::get('/eventos/{id}', function ($id) {
-    $event = Event::where('is_active', true)->findOrFail($id);
-    
-    return view('evento-detalhes-bd', compact('event'));
-})->name('evento.detalhes.bd');
-
 Route::get('/contactos', function () {
     return view('contactos');
 })->name('contactos');
+
+Route::post('/contactos', function (\Illuminate\Http\Request $request) {
+    $validated = $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email|max:255',
+        'phone' => 'nullable|string|max:20',
+        'subject' => 'required|string|max:255',
+        'message' => 'required|string',
+    ]);
+
+    \App\Models\Contact::create([
+        'name' => $validated['name'],
+        'email' => $validated['email'],
+        'phone' => $validated['phone'] ?? null,
+        'subject' => $validated['subject'],
+        'message' => $validated['message'],
+        'status' => 'unread',
+    ]);
+
+    return redirect()->route('contactos')->with('success', 'Mensagem enviada com sucesso! Entraremos em contacto em breve.');
+})->name('contactos.store');
+
+Route::post('/agendar-visita', function (\Illuminate\Http\Request $request) {
+    $validated = $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email|max:255',
+        'phone' => 'nullable|string|max:20',
+        'organization' => 'nullable|string|max:255',
+        'visit_date' => 'required|date|after:today',
+        'preferred_time' => 'required',
+        'visit_type' => 'required|in:individual,group,school,guided',
+        'group_size' => 'required|integer|min:1',
+        'special_requests' => 'nullable|string',
+    ]);
+
+    \App\Models\Visit::create([
+        'name' => $validated['name'],
+        'email' => $validated['email'],
+        'phone' => $validated['phone'] ?? null,
+        'organization' => $validated['organization'] ?? null,
+        'visit_date' => $validated['visit_date'],
+        'visit_time' => $validated['preferred_time'],
+        'visit_type' => $validated['visit_type'],
+        'number_of_people' => $validated['group_size'],
+        'notes' => $validated['special_requests'] ?? null,
+        'status' => 'pending',
+    ]);
+
+    return redirect()->route('agendar.visita')->with('success', 'Pedido de visita enviado com sucesso! Entraremos em contacto em breve para confirmar.');
+})->name('visits.store');
 
 Route::get('/horarios', function () {
     $currentSeason = \App\Models\Schedule::getCurrentSeason();

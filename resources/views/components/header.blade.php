@@ -14,17 +14,6 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-auto d-none d-lg-block">
-                    <div class="header-links header-links-right">
-                        <ul>
-                            <li>
-                                <button type="button" class="sidebar-btn sideMenuToggler">
-                                    <span class="line"></span>                                        
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -34,7 +23,7 @@
                 <div class="row align-items-center justify-content-between">
                     <div class="col-auto">
                         <div class="header-logo">
-                            <a href="{{ route('home') }}"><img src="{{ asset('assets/img/Logo_MMA.png') }}" alt="Museu Municipal de Alcanena" style="max-height: 80px;"></a>
+                            <a href="{{ route('home') }}"><img src="{{ asset('assets/img/Logo_MMA.png') }}" alt="Museu Municipal de Alcanena" style="max-height: 70px;"></a>
                         </div>
                     </div>
                     <div class="col-auto">

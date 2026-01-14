@@ -7,14 +7,13 @@
 <!--==============================
 Breadcumb
 ============================== -->
-<div class="breadcumb-wrapper" data-bg-src="{{ asset('assets/img/bg/breadcrumb-bg.png') }}" style="position: relative;">
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5);"></div>
-    <div class="container" style="position: relative; z-index: 1;">
-        <div class="breadcumb-content" style="padding: 60px 0;">
-            <h1 class="breadcumb-title">Horários de Funcionamento</h1>
+<div class="breadcumb-wrapper" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 80px 0;">
+    <div class="container">
+        <div class="breadcumb-content text-center">
+            <h1 class="breadcumb-title text-white">Horários de Funcionamento</h1>
             <ul class="breadcumb-menu">
                 <li><a href="{{ route('home') }}">Início</a></li>
-                <li>Horários</li>
+                <li class="active">Horários</li>
             </ul>
         </div>
     </div>
@@ -91,7 +90,7 @@ Opening Hours Section
                 </div>
 
                 <div class="text-center mt-50">
-                    <div class="alert" style="background: #f8f9fa; border-left: 4px solid #D4A574; padding: 20px 30px; text-align: left; display: inline-block; max-width: 600px; border-radius: 8px;">
+                    <div class="alert" style="background: #f8f9fa; border-left: 4px solid #D4A574; padding: 20px 30px; text-align: left; display: inline-block; max-width: 100%; width: 100%; border-radius: 8px;">
                         <i class="fas fa-info-circle" style="color: #D4A574; font-size: 20px; margin-right: 10px;"></i>
                         <span style="color: #555; font-size: 15px; line-height: 1.6;">
                             <strong>Nota:</strong> O museu permanece encerrado nos feriados nacionais e municipais. Sugerimos que confirme a disponibilidade antes da sua visita.
@@ -100,11 +99,8 @@ Opening Hours Section
                 </div>
 
                 <div class="text-center mt-40">
-                    <a href="{{ route('agendar.visita') }}" class="btn" style="padding: 15px 40px; font-size: 16px; font-weight: 600;">
+                    <a href="{{ route('agendar.visita') }}" class="btn" style="padding: 15px 40px; font-size: 16px; font-weight: 600; display: inline-block;">
                         <i class="fas fa-calendar-check me-2"></i>Agendar Visita
-                    </a>
-                    <a href="{{ route('contactos') }}" class="btn btn-border ms-3" style="padding: 15px 40px; font-size: 16px; font-weight: 600;">
-                        <i class="fas fa-phone me-2"></i>Contacte-nos
                     </a>
                 </div>
             </div>

@@ -1,0 +1,88 @@
+/* Customizações específicas do cliente */
+
+/* 1. Tamanho do logo ajustado */
+.header-logo img {
+    max-height: 70px !important;
+    height: auto !important;
+    width: auto !important;
+}
+
+/* 2. Remover efeito hover do logo */
+.header-logo a {
+    pointer-events: auto !important;
+    transition: none !important;
+}
+
+.header-logo a:hover {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.header-logo img {
+    transition: none !important;
+}
+
+.header-logo img:hover {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+}
+
+/* 3. Adicionar overlay escuro nas fotos do hero */
+.hero-slider .hero-thumb1::after,
+.hero-slider .hero-thumb2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5) !important;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* 4. Breadcrumbs com texto capitalizado (primeira letra maiúscula) */
+.breadcumb-menu li,
+.breadcumb-menu a {
+    text-transform: capitalize !important;
+}
+
+/* 5. Remover border mais escuro do breadcrumb - usar tom único de cinza */
+.breadcumb-menu li {
+    border-color: transparent !important;
+}
+
+.breadcumb-menu li:after {
+    color: rgba(255, 255, 255, 0.6) !important;
+    border-color: transparent !important;
+}
+
+/* 6. Fonte dos botões com suporte a caracteres especiais */
+.btn, a.btn, button.btn {
+    font-family: 'Jost', sans-serif !important;
+    font-feature-settings: normal !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 7. Remover shadow-text dos cards de eventos */
+.shadow-text {
+    display: none !important;
+}
+
+/* 8. Ajustar imagens dos eventos para cobrir todo o espaço */
+.exhibition-card-thumb img,
+.event-card-thumb img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 9. Remover efeito do cursor personalizado */
+.cursor,
+.cursor-follower {
+    display: none !important;
+    pointer-events: none !important;
+}

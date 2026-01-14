@@ -22,21 +22,24 @@
     <link rel="stylesheet" href="{{ asset('assets/css/slick.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/odometer.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
 </head>
 
 <body>
-    <!-- Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    <!-- Cursor End -->
 
     @include('components.preloader')
     @include('components.sidebar')
     @include('components.header')
     
-    @yield('content')
-    
-    @include('components.footer')
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+        
+        @yield('content')
+        
+        @include('components.footer')
+        
+        </div>
+    </div>
     
     <!-- Scroll To Top -->
     <div class="scroll-top">

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- Homepage -->
+    <url>
+        <loc>https://museu-alcanena.pt/</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://museu-alcanena.pt/assets/img/Logo_MMA.png</image:loc>
+            <image:title>Museu Municipal de Alcanena</image:title>
+        </image:image>
+    </url>
+    
+    <!-- Sobre -->
+    <url>
+        <loc>https://museu-alcanena.pt/sobre</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Coleções -->
+    <url>
+        <loc>https://museu-alcanena.pt/colecoes</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://museu-alcanena.pt/assets/img/exhibition/mma_1.jpg</image:loc>
+            <image:title>Coleção Arqueologia</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://museu-alcanena.pt/assets/img/exhibition/mma_2.jpg</image:loc>
+            <image:title>Coleção Curtumes</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://museu-alcanena.pt/assets/img/exhibition/mma_3.jpg</image:loc>
+            <image:title>Coleção História Local</image:title>
+        </image:image>
+    </url>
+    
+    <!-- Coleção Arqueologia -->
+    <url>
+        <loc>https://museu-alcanena.pt/colecoes/arqueologia</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Coleção Curtumes -->
+    <url>
+        <loc>https://museu-alcanena.pt/colecoes/curtumes</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Coleção História Local -->
+    <url>
+        <loc>https://museu-alcanena.pt/colecoes/historia-local</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Eventos -->
+    <url>
+        <loc>https://museu-alcanena.pt/eventos</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Evento - Arqueologia 45 Mil Anos -->
+    <url>
+        <loc>https://museu-alcanena.pt/eventos/exposicao-arqueologia-45mil-anos</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Evento - Curtumes -->
+    <url>
+        <loc>https://museu-alcanena.pt/eventos/exposicao-curtumes-memoria-industrial</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Evento - História Local -->
+    <url>
+        <loc>https://museu-alcanena.pt/eventos/exposicao-historia-local-etnografia</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Horários -->
+    <url>
+        <loc>https://museu-alcanena.pt/horarios</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Contactos -->
+    <url>
+        <loc>https://museu-alcanena.pt/contactos</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Agendar Visita -->
+    <url>
+        <loc>https://museu-alcanena.pt/agendar-visita</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Galeria -->
+    <url>
+        <loc>https://museu-alcanena.pt/galeria</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+</urlset>

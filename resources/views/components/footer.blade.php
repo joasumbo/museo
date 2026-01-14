@@ -4,9 +4,7 @@
             <ul class="footer-menu-list" style="justify-content: center; display: flex; gap: 30px; flex-wrap: wrap; list-style: none; padding: 0; margin: 0;">
                 <li><a href="{{ route('home') }}">INÍCIO</a></li>
                 <li><a href="{{ route('sobre') }}">O MUSEU</a></li>
-                <li><a href="{{ route('colecoes') }}">COLEÇÕES</a></li>
                 <li><a href="{{ route('eventos') }}">EVENTOS</a></li>
-                <li><a href="{{ route('horarios') }}">HORÁRIOS</a></li>
                 <li><a href="{{ route('contactos') }}">CONTACTOS</a></li>
             </ul>
         </div>

@@ -1,0 +1,672 @@
+﻿<!doctype html>
+<html class="no-js" lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Galeria de Fotos - Museu Municipal de Alcanena</title>
+    <meta name="description" content="Galeria de fotos do Museu Municipal de Alcanena - descubra o nosso acervo e espaços expositivos através de imagens.">
+    <meta name="keywords" content="Galeria, Fotos, Museu Alcanena, Exposições, Património, Acervo">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/Logo_MMA.png') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/img/Logo_MMA.png') }}">
+    <meta name="msapplication-TileColor" content="#d4a574">
+    <meta name="msapplication-TileImage" content="{{ asset('assets/img/Logo_MMA.png') }}">
+    <meta name="theme-color" content="#d4a574">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/slick.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/odometer.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
+</head>
+
+<body>
+    @include('components.preloader')
+    @include('layouts.header')
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+        <!-- Breadcrumb -->
+        <div class="breadcumb-wrapper background-image" style="background-image: url('{{ asset('assets/img/hero/hero_mma_2.jpg') }}'); padding: 120px 0 60px;">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <h1 class="breadcumb-title">Galeria de Fotos</h1>
+                    <ul class="breadcumb-menu">
+                        <li><a href="{{ url('/') }}">INÍCIO</a></li>
+                        <li class="active">GALERIA</li>
+                    </ul>                
+                </div>
+            </div>
+        </div>
+
+        <!-- Intro Section -->
+        <div class="space-top overflow-hidden">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <div class="title-area mb-50 wow custom-anim-top" data-wow-duration="1.5s" data-wow-delay="0.1s">
+                            <span style="color: #d4a574; font-weight: 500; font-size: 14px; letter-spacing: 2px; text-transform: uppercase;">Imagens do Museu</span>
+                            <h2 class="sec-title mt-3" style="font-size: 38px;">Um Olhar Sobre o Nosso Património</h2>
+                            <p class="mt-20" style="font-size: 16px; line-height: 1.8; color: #666;">
+                                Explore visualmente o Museu Municipal de Alcanena, os nossos espaços expositivos e o rico acervo que preserva 45 mil anos de História.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galeria de Imagens - Slider -->
+        <div class="space-bottom overflow-hidden" style="background: #f8f8f8;">
+            <div class="container-fluid px-0">
+                
+                <!-- Slider Principal -->
+                <div class="gallery-slider">
+                    
+                    <!-- Slide 1 -->
+                    <div class="gallery-slide">
+                        <div style="position: relative; height: 700px; overflow: hidden;">
+                            <a class="gallery-item" href="{{ asset('assets/img/gallery/DSC_3932.jpg') }}" title="Acervo Arqueológico">
+                                <img src="{{ asset('assets/img/gallery/DSC_3932.jpg') }}" alt="Acervo Arqueológico" style="width: 100%; height: 100%; object-fit: cover;">
+                            </a>
+                            <div class="slide-caption">
+                                <div class="container">
+                                    <div class="caption-content">
+                                        <span class="caption-tag">ARQUEOLOGIA</span>
+                                        <h2 class="caption-title">Acervo Arqueológico</h2>
+                                        <p class="caption-text">45 mil anos de História preservados desde o Paleolítico até à Idade Moderna</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="gallery-slide">
+                        <div style="position: relative; height: 700px; overflow: hidden;">
+                            <a class="gallery-item" href="{{ asset('assets/img/portfolio/mma_portfolio_2.jpg') }}" title="Coleção Curtumes">
+                                <img src="{{ asset('assets/img/portfolio/mma_portfolio_2.jpg') }}" alt="Coleção Curtumes" style="width: 100%; height: 100%; object-fit: cover;">
+                            </a>
+                            <div class="slide-caption">
+                                <div class="container">
+                                    <div class="caption-content">
+                                        <span class="caption-tag">⭐ única NO PAÍS</span>
+                                        <h2 class="caption-title">Coleção Curtumes</h2>
+                                        <p class="caption-text">Especificidade téúnica e industrial incomparável - Património único da indústria do couro</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="gallery-slide">
+                        <div style="position: relative; height: 700px; overflow: hidden;">
+                            <a class="gallery-item" href="{{ asset('assets/img/gallery/DSC_3946.jpg') }}" title="Espaço Expositivo">
+                                <img src="{{ asset('assets/img/gallery/DSC_3946.jpg') }}" alt="Espaço Expositivo" style="width: 100%; height: 100%; object-fit: cover;">
+                            </a>
+                            <div class="slide-caption">
+                                <div class="container">
+                                    <div class="caption-content">
+                                        <span class="caption-tag">ESPAÇOS</span>
+                                        <h2 class="caption-title">Salas de Exposição</h2>
+                                        <p class="caption-text">Espaços modernos e acolhedores para descobrir o nosso Património cultural</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="gallery-slide">
+                        <div style="position: relative; height: 700px; overflow: hidden;">
+                            <a class="gallery-item" href="{{ asset('assets/img/portfolio/mma_portfolio_3.jpg') }}" title="História Local">
+                                <img src="{{ asset('assets/img/portfolio/mma_portfolio_3.jpg') }}" alt="História Local" style="width: 100%; height: 100%; object-fit: cover;">
+                            </a>
+                            <div class="slide-caption">
+                                <div class="container">
+                                    <div class="caption-content">
+                                        <span class="caption-tag">ETNOGRAFIA</span>
+                                        <h2 class="caption-title">História Local</h2>
+                                        <p class="caption-text">Da "Rata Cega" aos utensílios de Minde - memórias de um povo</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="gallery-slide">
+                        <div style="position: relative; height: 700px; overflow: hidden;">
+                            <a class="gallery-item" href="{{ asset('assets/img/gallery/DSC_3950.jpg') }}" title="Vitrine Museológica">
+                                <img src="{{ asset('assets/img/gallery/DSC_3950.jpg') }}" alt="Vitrine Museológica" style="width: 100%; height: 100%; object-fit: cover;">
+                            </a>
+                            <div class="slide-caption">
+                                <div class="container">
+                                    <div class="caption-content">
+                                        <span class="caption-tag">ACERVO</span>
+                                        <h2 class="caption-title">Vitrines Expositivas</h2>
+                                        <p class="caption-text">Cada peça conta uma História única do território de Alcanena</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="gallery-slide">
+                        <div style="position: relative; height: 700px; overflow: hidden;">
+                            <a class="gallery-item" href="{{ asset('assets/img/gallery/DSC_3958.jpg') }}" title="Detalhes do Acervo">
+                                <img src="{{ asset('assets/img/gallery/DSC_3958.jpg') }}" alt="Detalhes do Acervo" style="width: 100%; height: 100%; object-fit: cover;">
+                            </a>
+                            <div class="slide-caption">
+                                <div class="container">
+                                    <div class="caption-content">
+                                        <span class="caption-tag">Património</span>
+                                        <h2 class="caption-title">Detalhes do Acervo</h2>
+                                        <p class="caption-text">Objetos históricos cuidadosamente preservados para as gerações futuras</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 7 -->
+                    <div class="gallery-slide">
+                        <div style="position: relative; height: 700px; overflow: hidden;">
+                            <a class="gallery-item" href="{{ asset('assets/img/gallery/DSC_3961.jpg') }}" title="Espaço Museológico">
+                                <img src="{{ asset('assets/img/gallery/DSC_3961.jpg') }}" alt="Espaço Museológico" style="width: 100%; height: 100%; object-fit: cover;">
+                            </a>
+                            <div class="slide-caption">
+                                <div class="container">
+                                    <div class="caption-content">
+                                        <span class="caption-tag">MUSEU</span>
+                                        <h2 class="caption-title">Arquitetura e Design</h2>
+                                        <p class="caption-text">Espaços pensados para valorizar o Património histórico e cultural</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 8 -->
+                    <div class="gallery-slide">
+                        <div style="position: relative; height: 700px; overflow: hidden;">
+                            <a class="gallery-item" href="{{ asset('assets/img/exhibition/mma_1.jpg') }}" title="Exposição Permanente">
+                                <img src="{{ asset('assets/img/exhibition/mma_1.jpg') }}" alt="Exposição Permanente" style="width: 100%; height: 100%; object-fit: cover;">
+                            </a>
+                            <div class="slide-caption">
+                                <div class="container">
+                                    <div class="caption-content">
+                                        <span class="caption-tag">EXPOSIÇÃO</span>
+                                        <h2 class="caption-title">Coleções Permanentes</h2>
+                                        <p class="caption-text">Três núcleos expositivos que contam a História de Alcanena</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 9 -->
+                    <div class="gallery-slide">
+                        <div style="position: relative; height: 700px; overflow: hidden;">
+                            <a class="gallery-item" href="{{ asset('assets/img/exhibition/mma_2.jpg') }}" title="Sala do Museu">
+                                <img src="{{ asset('assets/img/exhibition/mma_2.jpg') }}" alt="Sala do Museu" style="width: 100%; height: 100%; object-fit: cover;">
+                            </a>
+                            <div class="slide-caption">
+                                <div class="container">
+                                    <div class="caption-content">
+                                        <span class="caption-tag">DESCOBERTA</span>
+                                        <h2 class="caption-title">Percurso Museológico</h2>
+                                        <p class="caption-text">Uma viagem fascinante pela História e cultura do concelho</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 10 -->
+                    <div class="gallery-slide">
+                        <div style="position: relative; height: 700px; overflow: hidden;">
+                            <a class="gallery-item" href="{{ asset('assets/img/exhibition/mma_3.jpg') }}" title="Património de Alcanena">
+                                <img src="{{ asset('assets/img/exhibition/mma_3.jpg') }}" alt="Património de Alcanena" style="width: 100%; height: 100%; object-fit: cover;">
+                            </a>
+                            <div class="slide-caption">
+                                <div class="container">
+                                    <div class="caption-content">
+                                        <span class="caption-tag">CULTURA</span>
+                                        <h2 class="caption-title">Património de Alcanena</h2>
+                                        <p class="caption-text">Inaugurado a 4 de outubro de 2024 - um espaço para todos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="space bg-title" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 80px 0;">
+            <div class="container">
+                <div class="row align-items-center text-center">
+                    <div class="col-lg-12">
+                        <div class="wow custom-anim-top" data-wow-duration="1.5s" data-wow-delay="0.1s">
+                            <h2 class="sec-title text-white mb-3">Venha Conhecer Pessoalmente</h2>
+                            <p class="text-white mb-4" style="font-size: 18px; opacity: 0.9;">
+                                Agende a sua visita e descubra 45 mil anos de História de Alcanena
+                            </p>
+                            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                                <a href="{{ url('/contactos') }}" class="btn" style="padding: 18px 45px; font-size: 16px; font-weight: 600;">
+                                    <i class="far fa-calendar-check me-2"></i>AGENDAR VISITA
+                                </a>
+                                <a href="{{ url('/Coleções') }}" class="btn style2" style="padding: 18px 45px; font-size: 16px; font-weight: 600;">
+                                    <i class="fas fa-images me-2"></i>VER Coleções
+                                </a>
+                            </div>
+                            <p class="text-white mt-4 mb-0" style="font-size: 14px; opacity: 0.75;">
+                                <i class="fas fa-ticket-alt me-2"></i>Entrada Gratuita | <i class="far fa-clock ms-3 me-2"></i>Quarta a Domingo
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @include('layouts.footer')
+
+        </div>
+    </div>
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+        </svg>
+    </div>
+
+    <!-- All Js File -->
+    <script src="{{ asset('assets/js/vendor/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/js/ScrollTrigger.min.js') }}"></script>
+    <script src="{{ asset('assets/js/ScrollSmoother.min.js') }}"></script>
+    <script src="{{ asset('assets/js/ScrollToPlugin.min.js') }}"></script>
+    <script src="{{ asset('assets/js/SplitText.min.js') }}"></script>
+    <script src="{{ asset('assets/js/gsap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/waypoints.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+
+    <!-- Gallery Modal Configuration -->
+    <script>
+        $(document).ready(function() {
+            // Inicializar Slider
+            $('.gallery-slider').slick({
+                dots: true,
+                arrows: true,
+                infinite: true,
+                speed: 800,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                fade: true,
+                cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+                pauseOnHover: true,
+                pauseOnFocus: true,
+                prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+                nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
+            });
+
+            // Configurar modal de galeria
+            $('.gallery-item').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0,1],
+                    arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
+                    tPrev: 'Anterior',
+                    tNext: 'Próxima',
+                    tCounter: '<span class="mfp-counter">%curr% de %total%</span>'
+                },
+                image: {
+                    titleSrc: 'title',
+                    verticalFit: true,
+                    tError: '<a href="%url%">A imagem</a> não pôde ser carregada.'
+                },
+                mainClass: 'mfp-fade',
+                removalDelay: 300
+            });
+        });
+    </script>
+
+    <style>
+        /* Estilos do Slider */
+        .gallery-slider {
+            position: relative;
+        }
+
+        .gallery-slide > div {
+            position: relative;
+            height: 700px;
+            overflow: hidden;
+        }
+
+        .gallery-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(0.85);
+            transition: filter 0.5s;
+        }
+
+        .gallery-slider .slick-current img {
+            filter: brightness(1);
+        }
+
+        /* Legendas */
+        .slide-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 60%, transparent 100%);
+            padding: 100px 0 60px;
+            z-index: 10;
+        }
+
+        .caption-content {
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .caption-tag {
+            display: inline-block;
+            background: rgba(212, 165, 116, 0.9);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .caption-title {
+            color: #fff;
+            font-size: 48px;
+            font-weight: 700;
+            margin: 15px 0;
+            line-height: 1.2;
+        }
+
+        .caption-text {
+            color: rgba(255,255,255,0.9);
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0;
+        }
+
+        /* Setas do Slider */
+        .gallery-slider .slick-prev,
+        .gallery-slider .slick-next {
+            width: 60px;
+            height: 60px;
+            background: rgba(212, 165, 116, 0.9);
+            border-radius: 50%;
+            z-index: 20;
+            transition: all 0.3s;
+        }
+
+        .gallery-slider .slick-prev {
+            left: 30px;
+        }
+
+        .gallery-slider .slick-next {
+            right: 30px;
+        }
+
+        .gallery-slider .slick-prev:hover,
+        .gallery-slider .slick-next:hover {
+            background: #d4a574;
+            transform: scale(1.1);
+        }
+
+        .gallery-slider .slick-prev:before,
+        .gallery-slider .slick-next:before {
+            content: '';
+            display: none;
+        }
+
+        .gallery-slider .slick-prev i,
+        .gallery-slider .slick-next i {
+            color: #fff;
+            font-size: 20px;
+            line-height: 60px;
+        }
+
+        /* Dots */
+        .gallery-slider .slick-dots {
+            bottom: 30px;
+            z-index: 20;
+        }
+
+        .gallery-slider .slick-dots li button:before {
+            color: #fff;
+            font-size: 12px;
+            opacity: 0.5;
+        }
+
+        .gallery-slider .slick-dots li.slick-active button:before {
+            color: #d4a574;
+            opacity: 1;
+        }
+
+        /* Modal da Galeria */
+        .mfp-fade.mfp-bg {
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+        .mfp-fade.mfp-bg.mfp-ready {
+            opacity: 0.95;
+            background: #1a1a1a;
+        }
+        .mfp-fade.mfp-wrap .mfp-content {
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+        .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+            opacity: 1;
+        }
+        
+        .mfp-counter {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            background: rgba(212, 165, 116, 0.9);
+            padding: 8px 16px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+        }
+        
+        .mfp-arrow {
+            width: 60px;
+            height: 60px;
+            background: rgba(212, 165, 116, 0.9);
+            border-radius: 50%;
+            opacity: 0.8;
+            transition: all 0.3s;
+        }
+        .mfp-arrow:hover {
+            opacity: 1;
+            background: #d4a574;
+            transform: scale(1.1);
+        }
+        .mfp-arrow:before {
+            border: none;
+            content: '';
+            width: 20px;
+            height: 20px;
+            border-top: 3px solid #fff;
+            border-right: 3px solid #fff;
+            margin-top: -10px;
+        }
+        .mfp-arrow-left:before {
+            transform: rotate(-135deg);
+            margin-left: 5px;
+        }
+        .mfp-arrow-right:before {
+            transform: rotate(45deg);
+            margin-right: 5px;
+        }
+        
+        .mfp-title {
+            color: #fff;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* Responsivo */
+        @media (max-width: 991px) {
+            .gallery-slide > div {
+                height: 600px !important;
+            }
+
+            .caption-title {
+                font-size: 36px;
+            }
+
+            .caption-text {
+                font-size: 16px;
+            }
+
+            .slide-caption {
+                padding: 80px 0 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-slide > div {
+                height: 500px !important;
+            }
+
+            .gallery-slide img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .caption-title {
+                font-size: 28px;
+            }
+
+            .caption-text {
+                font-size: 15px;
+                padding: 0 15px;
+            }
+
+            .caption-tag {
+                font-size: 10px;
+                padding: 6px 15px;
+            }
+
+            .slide-caption {
+                padding: 60px 0 40px;
+            }
+
+            .gallery-slider .slick-prev,
+            .gallery-slider .slick-next {
+                width: 45px;
+                height: 45px;
+            }
+
+            .gallery-slider .slick-prev i,
+            .gallery-slider .slick-next i {
+                font-size: 16px;
+                line-height: 45px;
+            }
+
+            .gallery-slider .slick-prev {
+                left: 15px;
+            }
+
+            .gallery-slider .slick-next {
+                right: 15px;
+            }
+
+            .gallery-slider .slick-dots {
+                bottom: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .gallery-slide > div {
+                height: 450px !important;
+            }
+
+            .gallery-slide img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                min-height: 450px;
+            }
+
+            .caption-title {
+                font-size: 24px;
+            }
+
+            .caption-text {
+                font-size: 14px;
+            }
+
+            .slide-caption {
+                padding: 50px 0 30px;
+            }
+        }
+    </style>
+</body>
+
+</html>

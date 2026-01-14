@@ -1,604 +1,215 @@
-﻿<!doctype html>
-<html class="no-js" lang="zxx">
+﻿@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Artvista - Museum & Art Gallery HTML Template</title>
-    <meta name="description" content="Artvista - Museum & Art Gallery HTML Template">
-    <meta name="keywords" content="Artvista - Museum & Art Gallery HTML Template">
-    <meta name="robots" content="INDEX,FOLLOW">
+@section('title', 'Contactos - Museu Municipal de Alcanena')
+@section('description', 'Entre em contacto com o Museu Municipal de Alcanena. Estamos à sua disposição para qualquer informação.')
 
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Favicons - Place favicon.ico in the root directory -->
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/favicons/favicon.png') }}">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{{ asset('assets/img/favicons/ms-icon-144x144.png')') }}">
-    <meta name="theme-color" content="#ffffff">
-
-    <!--==============================
-	  Google Fonts
-	============================== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-
-    <!--==============================
-	    All CSS File
-	============================== -->
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-    <!-- Fontawesome Icon -->
-    <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.min.css') }}">
-    <!-- Slick Slider -->
-    <link rel="stylesheet" href="{{ asset('assets/css/slick.min.css') }}">
-    <!-- Odometer -->
-    <link rel="stylesheet" href="{{ asset('assets/css/odometer.css') }}">
-    <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-
-</head>
-
-<body>
-    <!--********************************
-   		Code Start From Here 
-	******************************** -->
-
-
-    <!-- Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    <!-- Cursor End -->
-
-    <!--==============================
-     Preloader
-    ==============================-->
-    <div class="preloader ">
-        <div class="preloader-inner">
-            <img src="{{ asset('assets/img/logo-white.svg') }}" alt="Artvista">
-            <span class="loader"></span>
+@section('content')
+<!--==============================
+Breadcumb
+============================== -->
+<div class="breadcumb-wrapper text-center" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 80px 0;">
+    <div class="container">
+        <div class="breadcumb-content">
+            <h1 class="breadcumb-title text-white">Contactos</h1>
         </div>
+        <ul class="breadcumb-menu">
+            <li><a href="{{ route('home') }}">Início</a></li>
+            <li class="active">Contactos</li>
+        </ul>                
     </div>
+</div>
 
-    <div class="sidemenu-wrapper">
-        <div class="sidemenu-content">
-            <button class="closeButton sideMenuCls"><i class="fas fa-times"></i></button>
-            <div class="widget footer-widget">
-                <div class="widget widget-about footer-widget">
-                    <div class="footer-logo">
-                        <a href="index.html"><img src="{{ asset('assets/img/logo-white.svg') }}" alt="logo"></a>
+<!--==============================
+Contact Area  
+==============================-->
+<div class="space" style="padding: 80px 0;">
+    <div class="container">
+        <div class="row justify-content-center mb-60">
+            <div class="col-lg-8 text-center">
+                <h2 class="sec-title mb-3" style="font-size: 36px;">Entre em Contacto</h2>
+                <p style="font-size: 18px; color: #666;">Estamos à sua disposição para esclarecer qualquer dúvida ou fornecer informações sobre o museu, exposições e eventos.</p>
+            </div>
+        </div>
+
+        <!-- Contact Info Cards -->
+        <div class="row g-4 mb-60">
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-info-card" style="background: #f8f9fa; padding: 40px 30px; border-radius: 10px; text-align: center; height: 100%; transition: transform 0.3s;">
+                    <div class="icon-box" style="width: 70px; height: 70px; background: #d4a574; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-map-marker-alt" style="color: #fff; font-size: 28px;"></i>
                     </div>
-                    <p class="about-text mb-4 text-white">A small business can be better than a big business because of agility and adaptability due to their size and scale.</p>
-                    
-                    <p class="footer-text text-white">
-                        <a href="tel:851555961658"><i class="fas fa-phone-alt me-2"></i>+85 155 596 1658</a>
+                    <h4 style="font-size: 20px; margin-bottom: 15px; color: #1a1a1a;">Morada</h4>
+                    <p style="color: #666; font-size: 15px; margin: 0; line-height: 1.6;">
+                        Rua Pedro Teixeira, nº 8<br>
+                        2380-077 Alcanena<br>
+                        Portugal
                     </p>
-                    <p class="contact-text text-white"><i class="fa fa-map-marker-alt me-2"></i> Losangle, Street Road 24, New York, USA - 67452</p>
-                    <p class="footer-text text-white"><a href="mailto:support@gmail.com"><i class="fas fa-envelope me-2"></i>support@gmail.com</a></p>
-                    <div class="social-btn style2 mt-30">
-                        <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                        <a href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>                           
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-info-card" style="background: #f8f9fa; padding: 40px 30px; border-radius: 10px; text-align: center; height: 100%; transition: transform 0.3s;">
+                    <div class="icon-box" style="width: 70px; height: 70px; background: #d4a574; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-phone-alt" style="color: #fff; font-size: 28px;"></i>
                     </div>
-                    <div class="recent-post-wrap mt-40">
-                        <div class="recent-post">
-                            <div class="media-img">
-                                <a href="blog-details.html"><img src="{{ asset('assets/img/widget/widget1-1.png') }}" alt="Blog Image"></a>
-                            </div>
-                            <div class="media-body">
-                                <div class="recent-post-meta">
-                                    <a href="blog.html"><i class="far fa-clock"></i> 15 Jan, 2024</a>
-                                </div>
-                                <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Education is at the heart of everything we do, and</a></h4>                                
-                            </div>
-                        </div>
-                        <div class="recent-post">
-                            <div class="media-img">
-                                <a href="blog-details.html"><img src="{{ asset('assets/img/widget/widget1-2.png') }}" alt="Blog Image"></a>
-                            </div>
-                            <div class="media-body">
-                                <div class="recent-post-meta">
-                                    <a href="blog.html"><i class="far fa-clock"></i> 05 Jul, 2024</a>
-                                </div>
-                                <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Exploring A Journey Through Egyptian Artifacts</a></h4>                                
-                            </div>
-                        </div>
-                        <div class="recent-post">
-                            <div class="media-img">
-                                <a href="blog-details.html"><img src="{{ asset('assets/img/widget/widget1-3.png') }}" alt="Blog Image"></a>
-                            </div>
-                            <div class="media-body">
-                                <div class="recent-post-meta">
-                                    <a href="blog.html"><i class="far fa-clock"></i> 14 Sep, 2024</a>
-                                </div>
-                                <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Whether you're a seasoned or a curious </a></h4>                                
-                            </div>
-                        </div>
+                    <h4 style="font-size: 20px; margin-bottom: 15px; color: #1a1a1a;">Telefone</h4>
+                    <p style="color: #666; font-size: 15px; margin: 0;">
+                        <a href="tel:+351249580170" style="color: #d4a574; font-weight: 600; font-size: 18px;">+351 249 580 170</a>
+                    </p>
+                    <p style="color: #999; font-size: 13px; margin-top: 10px;">Terça a Domingo<br>10:00 - 13:00 | 14:00 - 18:00</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-info-card" style="background: #f8f9fa; padding: 40px 30px; border-radius: 10px; text-align: center; height: 100%; transition: transform 0.3s;">
+                    <div class="icon-box" style="width: 70px; height: 70px; background: #d4a574; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-envelope" style="color: #fff; font-size: 28px;"></i>
                     </div>
-                    <form class="newsletter-form mt-40">
-                        <div class="form-group">
-                            <input class="form-control" type="email" placeholder="Email Address" required="">
+                    <h4 style="font-size: 20px; margin-bottom: 15px; color: #1a1a1a;">Email</h4>
+                    <p style="color: #666; font-size: 15px; margin: 0;">
+                        <a href="mailto:museu@cm-alcanena.pt" style="color: #d4a574; font-weight: 600;">museu@cm-alcanena.pt</a>
+                    </p>
+                    <p style="color: #999; font-size: 13px; margin-top: 10px;">Resposta em 24-48 horas</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="contact-form-wrap" style="background: #f8f9fa; padding: 50px; border-radius: 15px;">
+                    <div class="title-area text-center mb-40">
+                        <h3 class="sec-title" style="font-size: 28px; margin-bottom: 15px;">Envie-nos uma Mensagem</h3>
+                        <p style="color: #666;">Preencha o formulário abaixo e entraremos em contacto consigo o mais brevemente possível.</p>
+                    </div>
+
+                    @if(session('success'))
+                        <div class="alert alert-success" style="background: #d4edda; border: 1px solid #c3e6cb; color: #155724; padding: 15px; border-radius: 8px; margin-bottom: 30px;">
+                            <i class="fas fa-check-circle"></i> {{ session('success') }}
                         </div>
-                        <button type="submit" class="btn">SUBSCRIBE</button>
+                    @endif
+
+                    @if($errors->any())
+                        <div class="alert alert-danger" style="background: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; padding: 15px; border-radius: 8px; margin-bottom: 30px;">
+                            <i class="fas fa-exclamation-circle"></i> Por favor, corrija os seguintes erros:
+                            <ul style="margin: 10px 0 0 20px;">
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    
+                    <form action="{{ route('contactos.store') }}" method="POST" class="contact-form">
+                        @csrf
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label style="font-weight: 600; color: #333; margin-bottom: 10px; display: block;">Nome Completo *</label>
+                                    <input type="text" class="form-control" name="name" value="{{ old('name') }}" required style="padding: 15px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 15px;">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label style="font-weight: 600; color: #333; margin-bottom: 10px; display: block;">Email *</label>
+                                    <input type="email" class="form-control" name="email" value="{{ old('email') }}" required style="padding: 15px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 15px;">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label style="font-weight: 600; color: #333; margin-bottom: 10px; display: block;">Telefone</label>
+                                    <input type="tel" class="form-control" name="phone" value="{{ old('phone') }}" style="padding: 15px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 15px;">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label style="font-weight: 600; color: #333; margin-bottom: 10px; display: block;">Assunto *</label>
+                                    <select class="form-control" name="subject" required style="padding: 15px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 15px;">
+                                        <option value="">Selecione o assunto</option>
+                                        <option value="Informações Gerais" {{ old('subject') == 'Informações Gerais' ? 'selected' : '' }}>Informações Gerais</option>
+                                        <option value="Visitas Guiadas" {{ old('subject') == 'Visitas Guiadas' ? 'selected' : '' }}>Visitas Guiadas</option>
+                                        <option value="Eventos" {{ old('subject') == 'Eventos' ? 'selected' : '' }}>Eventos</option>
+                                        <option value="Exposições" {{ old('subject') == 'Exposições' ? 'selected' : '' }}>Exposições</option>
+                                        <option value="Reservas" {{ old('subject') == 'Reservas' ? 'selected' : '' }}>Reservas</option>
+                                        <option value="Outro" {{ old('subject') == 'Outro' ? 'selected' : '' }}>Outro</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label style="font-weight: 600; color: #333; margin-bottom: 10px; display: block;">Mensagem *</label>
+                                    <textarea class="form-control" name="message" rows="6" required style="padding: 15px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 15px; resize: vertical;" placeholder="Escreva aqui a sua mensagem...">{{ old('message') }}</textarea>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn" style="padding: 15px 50px; font-size: 16px;">
+                                    <i class="fas fa-paper-plane me-2"></i>ENVIAR MENSAGEM
+                                </button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
-    </div>
-    <!--==============================
-    PopUp Search
-    ============================== -->
-    <div class="popup-search-box">
-        <button class="searchClose"><i class="fas fa-times"></i></button>
-        <form action="#">
-            <input type="text" placeholder="Search Here..">
-            <button type="submit"><i class="fas fa-search"></i></button>
-        </form>
-    </div>
-    <!--==============================
-    Mobile Menu
-    ============================== -->
-    <div class="mobile-menu-wrapper">
-        <div class="mobile-menu-area text-center">
-            <button class="menu-toggle"><i class="fas fa-times"></i></button>
-            <div class="mobile-logo">
-                <a href="index.html"><img src="{{ asset('assets/img/logo-white.svg') }}" alt="Artvista"></a>
-            </div>
-            <div class="mobile-menu">
-                <ul>
-                    <li class="menu-item-has-children">
-                        <a href="#">Home</a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="index.html">Home 01</a>
-                            </li>
-                            <li>
-                                <a href="home-2.html">Home 02</a>
-                            </li>
-                            <li>
-                                <a href="home-3.html">Home 03</a>
-                            </li>
-                            <li>
-                                <a href="home-4.html">Home 04</a>
-                            </li>
-                            <li>
-                                <a href="home-5.html">Home 05</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Pages</a>
-                        <ul class="sub-menu">
-                            <li><a href="about.html">About Page</a></li>
-                            <li><a href="team.html">Team Page</a></li>
-                            <li><a href="team-details.html">Team Details</a></li>
-                            <li><a href="opening-hour.html">Opening Hour</a></li>
-                            <li><a href="location.html">Location Us</a></li>
-                            <li><a href="error.html">Error Page</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Portfolio</a>
-                        <ul class="sub-menu">
-                            <li><a href="project.html">Portfolio Standard</a></li>
-                            <li><a href="project-2.html">Portfolio On Hover</a></li>
-                            <li><a href="project-3.html">Portfolio List</a></li>
-                            <li><a href="project-4.html">Portfolio Full Width</a></li>
-                            <li><a href="project-details.html">Portfolio Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Events</a>
-                        <ul class="sub-menu">
-                            <li><a href="event.html">Event Page</a></li>
-                            <li><a href="event-2.html">Event Simple Page</a></li>
-                            <li><a href="event-3.html">Event Slider Page</a></li>
-                            <li><a href="event-4.html">Event list Page</a></li>
-                            <li><a href="event-details.html">Event Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog.html">Blog Page</a></li>
-                            <li><a href="blog-details.html">Blog Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Shop</a>
-                        <ul class="sub-menu">
-                            <li><a href="shop.html">Shop Grid</a></li>
-                            <li><a href="shop-2.html">Shop Grid with sidebar</a></li>
-                            <li><a href="shop-details.html">Shop Details</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!--==============================
-	Header Area
-    ==============================-->
-    <header class="nav-header header-layout1">
-        <div class="header-top d-md-block d-none">
-            <div class="container">
-                <div class="row justify-content-center justify-content-lg-between align-items-center gy-2">
-                    <div class="col-auto">
-                        <div class="header-links">
-                            <ul>
-                                <li><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15 11.0312L11.9375 9.71875C11.25 9.40625 10.4688 9.625 10 10.1875L9.15625 11.2188C7.75 10.4062 6.59375 9.25 5.78125 7.875L6.84375 7.03125C7.375 6.5625 7.59375 5.78125 7.3125 5.125L5.96875 2C5.65625 1.28125 4.875 0.875 4.09375 1.0625L1.25 1.71875C0.5 1.875 0 2.53125 0 3.3125C0 10.875 6.125 17 13.6875 17C14.4688 17 15.125 16.5 15.25 15.75L15.9062 12.9062C16.125 12.125 15.7188 11.3438 15 11.0312ZM14.4688 12.5625L13.8125 15.4062C13.8125 15.4375 13.75 15.5 13.6875 15.5C6.96875 15.5 1.46875 10.0312 1.46875 3.3125C1.46875 3.25 1.53125 3.1875 1.59375 3.1875L4.4375 2.53125L4.46875 2.5C4.53125 2.5 4.5625 2.5625 4.59375 2.59375L5.90625 5.65625C5.9375 5.71875 5.9375 5.78125 5.875 5.8125L4.34375 7.0625C4.09375 7.28125 4 7.65625 4.15625 7.96875C5.1875 10.0625 6.90625 11.7812 9 12.8125C9.3125 12.9688 9.71875 12.9062 9.9375 12.625L11.1875 11.0938C11.2188 11.0625 11.2812 11.0312 11.3438 11.0625L14.4062 12.375C14.4688 12.4375 14.5 12.5 14.4688 12.5625Z" fill="inherit"/>
-                                    </svg>
-                                    <a href="tel:012041654">Have any Question?</a></li>
-                                <li><i class="far fa-envelope"></i><a href="mailto:info@artvista.com">Mail Us: info@artvista.com</a></li>
-                                <li><i class="far fa-clock"></i>Mon - Fri: 8:00AM - 6:00PM</li>
-                            </ul>
-                        </div>
+
+        <!-- Additional Info -->
+        <div class="row justify-content-center mt-60">
+            <div class="col-lg-10">
+                <div class="info-box" style="background: linear-gradient(135deg, #d4a574 0%, #c99565 100%); padding: 40px; border-radius: 15px; text-align: center;">
+                    <h4 style="color: #fff; font-size: 24px; margin-bottom: 15px;">Horário de Funcionamento</h4>
+                    <div style="color: #fff; font-size: 16px; line-height: 1.8;">
+                        <p style="margin: 0;"><strong>Terça a Domingo:</strong> 10:00 - 13:00 | 14:00 - 18:00</p>
+                        <p style="margin: 10px 0 0 0;"><strong>Segunda-feira:</strong> Encerrado</p>
                     </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <div class="header-links header-links-right">
-                            <ul>
-                                <li>
-                                    <i class="fas fa-globe"></i><a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink6" data-bs-toggle="dropdown" aria-expanded="false">English</a>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink6">
-                                        <li>
-                                            <a href="#">German</a>
-                                            <a href="#">French</a>
-                                            <a href="#">Italian</a>
-                                            <a href="#">Latvian</a>
-                                            <a href="#">Spanish</a>
-                                            <a href="#">Greek</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <button type="button" class="sidebar-btn sideMenuToggler">
-                                        <span class="line"></span>                                        
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
+                    <div style="margin-top: 25px;">
+                        <a href="{{ route('horarios') }}" class="btn" style="background: #fff; color: #d4a574; padding: 12px 30px;">
+                            VER HORÁRIOS COMPLETOS
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="sticky-wrapper">
-            <!-- Main Menu Area -->
-            <div class="menu-area">
-                <div class="container">
-                    <div class="row align-items-center justify-content-between">
-                        <div class="col-auto">
-                            <div class="header-logo">
-                                <a href="index.html"><img src="{{ asset('assets/img/logo.svg') }}" alt="logo"></a>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <nav class="main-menu d-none d-lg-inline-block">
-                                <ul>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">Home</a>
-                                        <ul class="sub-menu">
-                                            <li>
-                                                <a href="index.html">Home 01</a>
-                                            </li>
-                                            <li>
-                                                <a href="home-2.html">Home 02</a>
-                                            </li>
-                                            <li>
-                                                <a href="home-3.html">Home 03</a>
-                                            </li>
-                                            <li>
-                                                <a href="home-4.html">Home 04</a>
-                                            </li>
-                                            <li>
-                                                <a href="home-5.html">Home 05</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">Pages</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="about.html">About Page</a></li>
-                                            <li><a href="team.html">Team Page</a></li>
-                                            <li><a href="team-details.html">Team Details</a></li>
-                                            <li><a href="opening-hour.html">Opening Hour</a></li>
-                                            <li><a href="location.html">Location Us</a></li>
-                                            <li><a href="error.html">Error Page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">Portfolio</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="project.html">Portfolio Standard</a></li>
-                                            <li><a href="project-2.html">Portfolio On Hover</a></li>
-                                            <li><a href="project-3.html">Portfolio List</a></li>
-                                            <li><a href="project-4.html">Portfolio Full Width</a></li>
-                                            <li><a href="project-details.html">Portfolio Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">Events</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="event.html">Event Page</a></li>
-                                            <li><a href="event-2.html">Event Simple Page</a></li>
-                                            <li><a href="event-3.html">Event Slider Page</a></li>
-                                            <li><a href="event-4.html">Event list Page</a></li>
-                                            <li><a href="event-details.html">Event Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">Blog</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog.html">Blog Page</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">Shop</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="shop.html">Shop Grid</a></li>
-                                            <li><a href="shop-2.html">Shop Grid with sidebar</a></li>
-                                            <li><a href="shop-details.html">Shop Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html">Contact</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <div class="navbar-right d-inline-flex d-lg-none">
-                                <button type="button" class="menu-toggle icon-btn"><i class="fas fa-bars"></i></button>
-                            </div>
-                        </div>
-                        <div class="col-auto d-none d-xl-block">
-                            <div class="header-button">
-                                <a href="contact.html" class="btn d-none d-xl-block">
-                                    TICKET & ADMISSION 
-                                </a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <div id="smooth-wrapper">
-        <div id="smooth-content">
-        <!--==============================
-        Breadcumb
-        ============================== -->
-        <div class="breadcumb-wrapper text-center" data-bg-src="{{ asset('assets/img/bg/breadcrumb-bg.png') }}">
-            <!-- bg animated image/ -->   
-            <div class="container">
-                <div class="breadcumb-content">
-                    <h1 class="breadcumb-title">Contact Us</h1>
-                </div>
-                <ul class="breadcumb-menu">
-                    <li><a href="index.html">MAIN HOME</a></li>
-                    <li class="active">CONTACT</li>
-                </ul>                
-            </div>
-        </div>
-
-        <!--==============================
-        Contact Area  
-        ==============================-->
-        <div class="space" >
-            <div class="container">
-                <div class="contact-page-wrap">
-                    <div class="row gx-0 justify-content-center flex-row-reverse">
-                        <div class="col-xl-5">
-                            <div class="map-sec">
-                                <iframe src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&t=m&z=10&output=embed&iwloc=near" allowfullscreen="" loading="lazy"></iframe>
-                            </div>
-                        </div>
-                        <div class="col-xl-7">
-                            <div class="contact-form-wrap">
-                                <div class="title-area mb-30">
-                                    <span class="sub-title text-theme">CONTACT US
-                                    </span>
-                                    <h2 class="sec-title">Get In Touch!</h2>
-                                </div>
-                                <form action="mail.php" method="POST" class="contact-form ajax-contact">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group style-4 form-icon-left">
-                                                <i class="far fa-user text-theme"></i>
-                                                <input type="text" class="form-control style-border" name="name" id="name" placeholder="Enter Full Name">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group style-4 form-icon-left">
-                                                <i class="far fa-envelope text-theme"></i>
-                                                <input type="text" class="form-control style-border" name="email" id="email" placeholder="Email Address">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="form-group style-4 form-icon-left">
-                                                <i class="far fa-comment text-theme"></i>
-                                                <textarea name="message" placeholder="Type Your Message" id="contactForm" class="form-control style-border"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-btn col-12">
-                                        <button type="submit" class="btn">SEND MESSAGE NOW</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Social Media -->
+        <div class="row justify-content-center mt-60">
+            <div class="col-lg-10 text-center">
+                <h4 style="font-size: 22px; margin-bottom: 20px; color: #1a1a1a;">Siga-nos nas Redes Sociais</h4>
+                <div class="social-links" style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://www.facebook.com/museumunicipaldealcanena" target="_blank" style="width: 50px; height: 50px; border-radius: 50%; background: #3b5998; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 20px; transition: transform 0.3s;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/museumunicipalalcanena" target="_blank" style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 20px; transition: transform 0.3s;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:museu@cm-alcanena.pt" style="width: 50px; height: 50px; border-radius: 50%; background: #d4a574; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 20px; transition: transform 0.3s;">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
             </div>
-        </div> 
-
-        <!--==============================
-            FooTerçarea
-        ==============================-->
-        <footer class="footer-wrapper footer-layout2 space-top overflow-hidden"> 
-            <div class="container">
-                <div class="footer-top text-center">
-                    <p class="subtitle">Through Museum Tours and Talks</p>
-                    <h2 class="title text-white">GET IN TOUCH</h2>
-                    <a class="btn" href="contact.html">Let’s Talk!</a>
-                </div>
-                <div class="widget-area">
-                    <div class="row justify-content-xl-between">
-                        <div class="col-md-6 col-xl-3 col-lg-4">
-                            <div class="widget footer-widget">
-                                <div class="widget-about">
-                                    <div class="footer-logo">
-                                        <img src="{{ asset('assets/img/logo-white.svg') }}" alt="logo">
-                                    </div>
-                                    <p class="footer-text">Welcome to Artvista, where history comes to life and art speaks volumes.</p>
-                                    <div class="payment-card-wrap">
-                                        <a href="#"><img src="{{ asset('assets/img/icon/payment-card1.png') }}" alt="img"></a>
-                                        <a href="#"><img src="{{ asset('assets/img/icon/payment-card2.png') }}" alt="img"></a>
-                                        <a href="#"><img src="{{ asset('assets/img/icon/payment-card3.png') }}" alt="img"></a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-auto col-lg-4">
-                            <div class="widget widget_nav_menu footer-widget">
-                                <h3 class="widget_title">Quick Links</h3>
-                                <div class="menu-all-pages-container">
-                                    <ul class="menu">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="event.html">Exhibitions</a></li>
-                                        <li><a href="event.html">Events</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-auto col-lg-4">
-                            <div class="widget widget_nav_menu footer-widget">
-                                <h3 class="widget_title">Visitor Info  </h3>
-                                <div class="menu-all-pages-container">
-                                    <ul class="menu">
-                                        <li><a href="contact.html">How To find Us</a></li>
-                                        <li><a href="contact.html">Get Ticket</a></li>
-                                        <li><a href="event.html">Join Events</a></li>
-                                        <li><a href="about.html">Tours</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-auto col-lg-4">
-                            <div class="widget widget_nav_menu footer-widget">
-                                <h3 class="widget_title">Social Info  </h3>
-                                <div class="menu-all-pages-container">
-                                    <ul class="menu">
-                                        <li><a href="https://www.facebook.com/">Facebook</a></li>
-                                        <li><a href="https://www.twitter.com/">Twitter</a></li>
-                                        <li><a href="https://www.linkedin.com/">Linkedin</a></li>
-                                        <li><a href="https://www.instagram.com/">Instagram</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-auto col-lg-4">
-                            <div class="widget footer-widget">
-                                <div class="widget-contact">
-                                    <h3 class="widget_title">Contact Info</h3>
-                                    <ul class="contact-info-list">
-                                        <li>Open daily,10Am . 10Pm</li>
-                                        <li class="text-light">Monday Closed</li>
-                                        <li>Rome,125 Ny 21 Kses </li>
-                                        <li>artvista@gmail.com</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                                           
-                    </div>
-                </div>
-            </div>
-            <div class="copyright-wrap text-center">
-                <div class="container">
-                    <div class="row gy-3 justify-content-lg-between justify-content-center">
-                        <div class="col-lg-auto align-self-center">
-                            <p class="copyright-text text-white">© 2024 Artvista All Rights Reserved.</p>
-                        </div>
-                        <div class="col-lg-auto align-self-center">
-                            <div class="footer-links">
-                                <ul>
-                                    <li><a href="about.html">Security</a></li>
-                                    <li><a href="about.html">Privacy & Cookie Policy</a></li>
-                                    <li><a href="about.html">Terms of Services</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>                
-                </div>
-            </div>
-        </footer>
-
         </div>
     </div>
+</div>
 
-    <!--********************************
-			Code End  Here 
-	******************************** -->
+<style>
+.contact-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
 
-    <!-- Scroll To Top -->
-    <div class="scroll-top">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
-        </svg>
-    </div>
+.form-control:focus {
+    border-color: #d4a574 !important;
+    box-shadow: 0 0 0 0.2rem rgba(212, 165, 116, 0.25) !important;
+}
 
-    <!--==============================
-    All Js File
-    ============================== -->
-    <!-- Jquery -->
-    <script src="{{ asset('assets/js/vendor/jquery-3.7.1.min.js') }}"></script>
-    <!-- Slick Slider -->
-    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
-    <!-- Bootstrap -->
-    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-    <!-- Magnific Popup -->
-    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
-    <!-- Counter Up -->
-    <script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
-    <!-- Range Slider -->
-    <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
-    <!-- Marquee JS-->
-    <script src="{{ asset('assets/js/jquery.marquee.min.js') }}"></script>
+.social-links a:hover {
+    transform: scale(1.15);
+}
 
-    <!-- Isotope Filter -->
-    <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}"></script>
-    <script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
-    
-    <!-- ScrollTrigger -->
-    <script src="{{ asset('assets/js/ScrollTrigger.min.js') }}"></script>
-    <!-- ScrollSmoother -->
-    <script src="{{ asset('assets/js/ScrollSmoother.min.js') }}"></script>
-    <!-- ScrollToPlugin -->
-    <script src="{{ asset('assets/js/ScrollToPlugin.min.js') }}"></script>
-    <!-- SplitText -->
-    <script src="{{ asset('assets/js/SplitText.min.js') }}"></script>
-    <!-- Gsap -->
-    <script src="{{ asset('assets/js/gsap.min.js') }}"></script>
+@media (max-width: 767px) {
+    .contact-form-wrap {
+        padding: 30px 20px !important;
+    }
+}
+</style>
 
-    <!-- WOW JS -->
-    <script src="{{ asset('assets/js/waypoints.js') }}"></script>
-    <script src="{{ asset('assets/js/wow.js') }}"></script>
-    
-    <!-- Main Js File -->
-    <script src="{{ asset('assets/js/main.js') }}"></script>
-</body>
-
-</html>
+@endsection

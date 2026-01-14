@@ -35,12 +35,6 @@
                     <a href="https://www.facebook.com/museumunicipaldealcanena"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/museumunicipalalcanena"><i class="fab fa-instagram"></i></a>                           
                 </div>
-                <form class="newsletter-form mt-40">
-                    <div class="form-group">
-                        <input class="form-control" type="email" placeholder="Endereço de Email" required="">
-                    </div>
-                    <button type="submit" class="btn">SUBSCREVER</button>
-                </form>
             </div>
         </div>
     </div>

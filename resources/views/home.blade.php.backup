@@ -1,51 +1,60 @@
 ﻿<!doctype html>
-<html class="no-js" lang="pt">
+<html class="no-js" lang="zxx">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Museu Municipal de Alcanena - Cultura e História</title>
-    <meta name="description" content="Museu Municipal de Alcanena - Espaço dedicado à preservação e divulgação do património cultural e histórico de Alcanena">
+    <meta name="description" content="Museu Municipal de Alcanena - Espaço dedicado à preservação e divulgação do Património cultural e histórico de Alcanena">
     <meta name="keywords" content="Museu, Alcanena, Cultura, História, Património, Exposições, Eventos">
     <meta name="robots" content="INDEX,FOLLOW">
+
+    <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/favicons/favicon.png') }}">
+    <!-- Favicons - Place favicon.ico in the root directory -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/Logo_MMA.png') }}">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{{ asset('assets/img/favicons/ms-icon-144x144.png') }}">
+    <meta name="msapplication-TileImage" content="{{ asset('assets/img/Logo_MMA.png') }}">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Google Fonts -->
+    <!--==============================
+	  Google Fonts
+	============================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <!-- Stylesheets -->
+
+    <!--==============================
+	    All CSS File
+	============================== -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <!-- Fontawesome Icon -->
     <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
+    <!-- Magnific Popup -->
     <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.min.css') }}">
+    <!-- Slick Slider -->
     <link rel="stylesheet" href="{{ asset('assets/css/slick.min.css') }}">
+    <!-- Odometer -->
     <link rel="stylesheet" href="{{ asset('assets/css/odometer.css') }}">
+    <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
 </head>
 
 <body>
-    @include('layouts.header')
-
-
-    <!-- Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    <!-- Cursor End -->
+    <!--********************************
+   		Code Start From Here 
+	******************************** -->
 
     <!--==============================
      Preloader
     ==============================-->
     <div class="preloader ">
         <div class="preloader-inner">
-            <img src="assets/img/logo-bordalo-pinheiro-white.svg" alt="Museu Municipal de Alcanena">
+            <img src="{{ asset('assets/img/logo-bordalo-pinheiro-white.svg') }}" alt="Museu Municipal de Alcanena">
             <span class="loader"></span>
         </div>
     </div>
@@ -58,7 +67,7 @@
             <div class="row gx-50">
                 <div class="col-lg-6">
                     <div class="product-big-img">
-                        <div class="img"><img src="assets/img/product/product-details1.png" alt="Product Image"></div>
+                        <div class="img"><img src="{{ asset('assets/img/product/product-details1.png') }}" alt="Product Image"></div>
                     </div>
                 </div>
                 <div class="col-lg-6 align-self-center">
@@ -103,9 +112,9 @@
             <div class="widget footer-widget">
                 <div class="widget widget-about footer-widget">
                     <div class="footer-logo">
-                        <a href="index.html"><img src="assets/img/logo-bordalo-pinheiro-white.svg" alt="Museu Municipal de Alcanena"></a>
+                        <a href="index.html"><img src="{{ asset('assets/img/logo-bordalo-pinheiro-white.svg') }}" alt="Museu Municipal de Alcanena"></a>
                     </div>
-                    <p class="about-text mb-4 text-white">Espaço dedicado à preservação e divulgação do património cultural e histórico de Alcanena.</p>
+                    <p class="about-text mb-4 text-white">Espaço dedicado à preservação e divulgação do Património cultural e histórico de Alcanena.</p>
                     
                     <p class="footer-text text-white">
                         <a href="tel:+351249580170"><i class="fas fa-phone-alt me-2"></i>+351 249 580 170</a>
@@ -116,12 +125,6 @@
                         <a href="https://www.facebook.com/museumunicipaldealcanena"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/museumunicipalalcanena"><i class="fab fa-instagram"></i></a>                           
                     </div>
-                    <form class="newsletter-form mt-40">
-                        <div class="form-group">
-                            <input class="form-control" type="email" placeholder="Endereço de Email" required="">
-                        </div>
-                        <button type="submit" class="btn">SUBSCREVER</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -133,27 +136,27 @@
         <div class="mobile-menu-area text-center">
             <button class="menu-toggle"><i class="fas fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="index.html"><img src="assets/img/logo-bordalo-pinheiro-white.svg" alt="Museu Municipal de Alcanena"></a>
+                <a href="index.html"><img src="{{ asset('assets/img/logo-bordalo-pinheiro-white.svg') }}" alt="Museu Municipal de Alcanena"></a>
             </div>
             <div class="mobile-menu">
                 <ul>
                     <li>
-                        <a href="index.html">Início</a>
+                        <a href="{{ route('home') }}">Início</a>
                     </li>
                     <li>
-                        <a href="about.html">O Museu</a>
+                        <a href="{{ route('sobre') }}">O Museu</a>
                     </li>
                     <li>
-                        <a href="project.html">Galeria</a>
+                        <a href="{{ route('colecoes') }}">Coleções</a>
                     </li>
                     <li>
-                        <a href="event.html">Eventos</a>
+                        <a href="{{ route('eventos') }}">Eventos</a>
                     </li>
                     <li>
-                        <a href="opening-hour.html">Horários</a>
+                        <a href="{{ route('horarios') }}">Horários</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contactos</a>
+                        <a href="{{ route('contactos') }}">Contactos</a>
                     </li>
                 </ul>
             </div>
@@ -178,17 +181,6 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <div class="header-links header-links-right">
-                            <ul>
-                                <li>
-                                    <button type="button" class="sidebar-btn sideMenuToggler">
-                                        <span class="line"></span>                                        
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -199,29 +191,29 @@
                     <div class="row align-items-center justify-content-between">
                         <div class="col-auto">
                             <div class="header-logo">
-                                <a href="index.html"><img src="assets/img/Logo_MMA.png" alt="Museu Municipal de Alcanena" style="max-height: 80px;"></a>
+                                <a href="{{ route('home') }}"><img src="{{ asset('assets/img/Logo_MMA.png') }}" alt="Museu Municipal de Alcanena" style="max-height: 70px;"></a>
                             </div>
                         </div>
                         <div class="col-auto">
                             <nav class="main-menu d-none d-lg-inline-block">
                                 <ul>
                                     <li>
-                                        <a href="index.html">Início</a>
+                                        <a href="{{ route('home') }}">Início</a>
                                     </li>
                                     <li>
-                                        <a href="about.html">O Museu</a>
+                                        <a href="{{ route('sobre') }}">O Museu</a>
                                     </li>
                                     <li>
-                                        <a href="project.html">Galeria</a>
+                                        <a href="{{ route('colecoes') }}">Coleções</a>
                                     </li>
                                     <li>
-                                        <a href="event.html">Eventos</a>
+                                        <a href="{{ route('eventos') }}">Eventos</a>
                                     </li>
                                     <li>
-                                        <a href="opening-hour.html">Horários</a>
+                                        <a href="{{ route('horarios') }}">Horários</a>
                                     </li>
                                     <li>
-                                        <a href="contact.html">Contactos</a>
+                                        <a href="{{ route('contactos') }}">Contactos</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -231,7 +223,7 @@
                         </div>
                         <div class="col-auto d-none d-xl-block">
                             <div class="header-button">
-                                <a href="contact.html" class="btn d-none d-xl-block">
+                                <a href="{{ route('agendar.visita') }}" class="btn d-none d-xl-block">
                                     AGENDAR VISITA
                                 </a>
                                 
@@ -250,27 +242,27 @@
         ==============================-->
         <div class="hero-wrapper hero-1" id="hero-sec">
             <div class="global-carousel hero-slider1" id="heroSlider1" data-fade="true" data-slide-show="1" data-lg-slide-show="1" data-md-slide-show="1" data-sm-slide-show="1" data-xs-slide-show="1" data-arrows="false" data-asnavfor=".hero-custom-dots">
-                <div class="hero-slider">
-                    <div class="hero-thumb1" data-ani="slider-custom-anim-left" data-ani-delay="0.1s">
-                        <img src="assets/img/hero/hero_mma_2.jpg" alt="Museu Municipal Alcanena">
+                <div class="hero-slider" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ asset('assets/img/hero/hero_mma_2.jpg') }}'); background-size: cover; background-position: center; min-height: 500px;">
+                    <div class="hero-thumb1" data-ani="slider-custom-anim-left" data-ani-delay="0.1s" style="display: none;">
+                        <img src="{{ asset('assets/img/hero/hero_mma_2.jpg') }}" alt="Museu Municipal Alcanena">
                     </div>
-                    <div class="hero-thumb2" data-ani="slider-custom-anim-right" data-ani-delay="0.1s">
-                        <img src="assets/img/hero/hero_mma_3.jpg" alt="Museu Municipal Alcanena">
+                    <div class="hero-thumb2" data-ani="slider-custom-anim-right" data-ani-delay="0.1s" style="display: none;">
+                        <img src="{{ asset('assets/img/hero/hero_mma_3.jpg') }}" alt="Museu Municipal Alcanena">
                     </div>
                     <div class="container">
                         <div class="row justify-content-center">                        
-                            <div class="col-lg-8 col-md-12">
-                                <div class="hero-style1">
-                                    <h1 class="hero-title" data-ani="slider-custom-anim-right" data-ani-delay="0.15s">Museu <span class="text-stroke">Municipal</span></h1>
-                                    <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">de Alcanena</h1>
-                                    <h1 class="hero-title title-bg-thumb" data-bg-src="assets/img/hero/hero_1_text-bg.png" data-ani="slider-custom-anim-right" data-ani-delay="0.25s">Cultura & História</h1>
+                            <div class="col-lg-10 col-md-12 text-center">
+                                <div class="hero-style1" style="padding: 150px 0;">
+                                    <h4 class="hero-subtitle text-white" style="font-size: 24px; font-weight: 400; margin-bottom: 20px; letter-spacing: 2px;" data-ani="slider-custom-anim-up" data-ani-delay="0.1s">BEM-VINDO AO</h4>
+                                    <h1 class="hero-title text-white" style="font-size: 72px; font-weight: 700; line-height: 1.2; margin-bottom: 30px;" data-ani="slider-custom-anim-up" data-ani-delay="0.2s">Museu Municipal<br>de Alcanena</h1>
+                                    <p class="hero-text text-white" style="font-size: 20px; font-weight: 300; max-width: 600px; margin: 0 auto;" data-ani="slider-custom-anim-up" data-ani-delay="0.3s">Preservando a história, celebrando a cultura</p>
                                 </div>
                             </div>
                         </div>                
                     </div>
                 </div>
             </div> 
-            <div class="container text-end">
+            <div class="container text-end" style="opacity: 0; pointer-events: none;">
                 <div class="hero-slider1-controller-wrap">
                     <div class="slides-numbers">
                         <span class="active">01</span> <span class="total"></span>
@@ -315,54 +307,34 @@
                     </div>
                 </div>
                 <div class="row justify-content-center exhibition-wrap-1 gy-40 gx-30">
+                    @forelse($featuredExhibitions as $exhibition)
                     <div class="col-lg-4 col-md-6 exhibition-card-wrap">
                         <div class="exhibition-card gtop">
                             <div class="exhibition-card-thumb">
-                                <img src="assets/img/exhibition/mma_1.jpg" alt="Exposição Museu">
-                                <div class="shadow-text">Exposição</div>
+                                <img src="{{ $exhibition->image ? url('storage/' . $exhibition->image) : asset('assets/img/exhibition/mma_1.jpg') }}" alt="{{ $exhibition->title }}">
                             </div>
                             <div class="exhibition-card-details">
                                 <div class="post-meta-item blog-meta">
-                                    <a href="blog.html">14 MAY, 2024 - 10 APRIL, 2024</a>
-                                    <a href="blog.html">09PM - 14AM</a>
+                                    <a href="{{ route('eventos') }}">
+                                        {{ $exhibition->start_date->format('d M, Y') }}
+                                        @if($exhibition->end_date && $exhibition->end_date != $exhibition->start_date)
+                                         - {{ $exhibition->end_date->format('d M, Y') }}
+                                        @endif
+                                    </a>
                                 </div>
-                                <h3 class="event-card-title"><a href="event.html">Capturing Essence in Art</a></h3>
-                                <a class="btn style2" href="event.html">SCULPTOR</a>
+                                <h3 class="event-card-title"><a href="{{ route('eventos') }}">{{ $exhibition->title }}</a></h3>
+                                @if($exhibition->short_description)
+                                <p class="event-text">{{ Str::limit($exhibition->short_description, 100) }}</p>
+                                @endif
+                                <a class="btn style2" href="{{ route('eventos') }}">VER DETALHES</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 exhibition-card-wrap">
-                        <div class="exhibition-card gtop">
-                            <div class="exhibition-card-thumb">
-                                <img src="assets/img/exhibition/mma_2.jpg" alt="Exposição Museu">
-                                <div class="shadow-text">Exposição</div>
-                            </div>
-                            <div class="exhibition-card-details">
-                                <div class="post-meta-item blog-meta">
-                                    <a href="blog.html">14 MAY, 2024 - 10 APRIL, 2024</a>
-                                    <a href="blog.html">09PM - 14AM</a>
-                                </div>
-                                <h3 class="event-card-title"><a href="event.html">Transforming Ideas into</a></h3>
-                                <a class="btn style2" href="event.html">SCULPTOR</a>
-                            </div>
-                        </div>
+                    @empty
+                    <div class="col-12 text-center">
+                        <p class="text-white">Nenhuma exposição em destaque no momento.</p>
                     </div>
-                    <div class="col-lg-4 col-md-6 exhibition-card-wrap">
-                        <div class="exhibition-card gtop">
-                            <div class="exhibition-card-thumb">
-                                <img src="assets/img/exhibition/mma_3.jpg" alt="Exposição Museu">
-                                <div class="shadow-text">Exposição</div>
-                            </div>
-                            <div class="exhibition-card-details">
-                                <div class="post-meta-item blog-meta">
-                                    <a href="blog.html">14 MAY, 2024 - 10 APRIL, 2024</a>
-                                    <a href="blog.html">09PM - 14AM</a>
-                                </div>
-                                <h3 class="event-card-title"><a href="event.html">Sculpting the Landscape </a></h3>
-                                <a class="btn style2" href="event.html">SCULPTOR</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforelse
                 </div>
             </div>
         </div>
@@ -376,13 +348,13 @@
                 <div class="row justify-content-between text-lg-start text-center">
                     <div class="col-lg-8">
                         <div class="title-area wow custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.1s">
-                            <h2 class="sec-title text-white">Nossa Coleção</h2>
+                            <h2 class="sec-title text-white">Galeria</h2>
                         </div>
                     </div>
                     <div class="col-lg-auto">
                         <div class="icon-box mb-40">
-                            <button data-slick-prev=".portfolio-slider1" class="slick-arrow default">ANTERIOR</button>
-                            <button data-slick-next=".portfolio-slider1" class="slick-arrow default">PRÓXIMO</button>
+                            <button data-slick-prev=".portfolio-slider1" class="slick-arrow default" style="font-size: 11px; padding: 8px 12px;">◄</button>
+                            <button data-slick-next=".portfolio-slider1" class="slick-arrow default" style="font-size: 11px; padding: 8px 12px;">►</button>
                         </div>
                     </div>
                 </div>                
@@ -392,11 +364,11 @@
                     <div class="col-lg-4">
                         <div class="portfolio-card ">
                             <div class="portfolio-thumb">
-                                <a class="popup-image icon-btn" href="assets/img/portfolio/mma_portfolio_1.jpg"><i class="far fa-eye"></i></a>
-                                <img src="assets/img/portfolio/mma_portfolio_1.jpg" alt="portfolio">
+                                <a class="popup-image icon-btn" href="{{ asset('assets/img/portfolio/mma_portfolio_1.jpg') }}"><i class="far fa-eye"></i></a>
+                                <img src="{{ asset('assets/img/portfolio/mma_portfolio_1.jpg') }}" alt="portfolio">
                             </div>
                             <div class="portfolio-details">
-                                <h3 class="portfilio-card-title"><a href="project-details.html">Hist�ria Local</a></h3>
+                                <h3 class="portfilio-card-title"><a href="project-details.html">História Local</a></h3>
                                 <a href="project-details.html" class="btn btn-border btn-radius">
                                     VER COLEÇÃO
                                 </a>
@@ -406,8 +378,8 @@
                     <div class="col-lg-4">
                         <div class="portfolio-card ">
                             <div class="portfolio-thumb">
-                                <a class="popup-image icon-btn" href="assets/img/portfolio/mma_portfolio_2.jpg"><i class="far fa-eye"></i></a>
-                                <img src="assets/img/portfolio/mma_portfolio_2.jpg" alt="portfolio">
+                                <a class="popup-image icon-btn" href="{{ asset('assets/img/portfolio/mma_portfolio_2.jpg') }}"><i class="far fa-eye"></i></a>
+                                <img src="{{ asset('assets/img/portfolio/mma_portfolio_2.jpg') }}" alt="portfolio">
                             </div>
                             <div class="portfolio-details">
                                 <h3 class="portfilio-card-title"><a href="project-details.html">Arte e Cultura</a></h3>
@@ -420,11 +392,11 @@
                     <div class="col-lg-4">
                         <div class="portfolio-card ">
                             <div class="portfolio-thumb">
-                                <a class="popup-image icon-btn" href="assets/img/portfolio/mma_portfolio_3.jpg"><i class="far fa-eye"></i></a>
-                                <img src="assets/img/portfolio/mma_portfolio_3.jpg" alt="portfolio">
+                                <a class="popup-image icon-btn" href="{{ asset('assets/img/portfolio/mma_portfolio_3.jpg') }}"><i class="far fa-eye"></i></a>
+                                <img src="{{ asset('assets/img/portfolio/mma_portfolio_3.jpg') }}" alt="portfolio">
                             </div>
                             <div class="portfolio-details">
-                                <h3 class="portfilio-card-title"><a href="project-details.html">Patrim�nio Cultural</a></h3>
+                                <h3 class="portfilio-card-title"><a href="project-details.html">Património Cultural</a></h3>
                                 <a href="project-details.html" class="btn btn-border btn-radius">
                                     VER COLEÇÃO
                                 </a>
@@ -434,11 +406,11 @@
                     <div class="col-lg-4">
                         <div class="portfolio-card ">
                             <div class="portfolio-thumb">
-                                <a class="popup-image icon-btn" href="assets/img/portfolio/mma_portfolio_1.jpg"><i class="far fa-eye"></i></a>
-                                <img src="assets/img/portfolio/mma_portfolio_1.jpg" alt="portfolio">
+                                <a class="popup-image icon-btn" href="{{ asset('assets/img/portfolio/mma_portfolio_1.jpg') }}"><i class="far fa-eye"></i></a>
+                                <img src="{{ asset('assets/img/portfolio/mma_portfolio_1.jpg') }}" alt="portfolio">
                             </div>
                             <div class="portfolio-details">
-                                <h3 class="portfilio-card-title"><a href="project-details.html">Hist�ria Local</a></h3>
+                                <h3 class="portfilio-card-title"><a href="project-details.html">História Local</a></h3>
                                 <a href="project-details.html" class="btn btn-border btn-radius">
                                     VER COLEÇÃO
                                 </a>
@@ -448,8 +420,8 @@
                     <div class="col-lg-4">
                         <div class="portfolio-card ">
                             <div class="portfolio-thumb">
-                                <a class="popup-image icon-btn" href="assets/img/portfolio/mma_portfolio_2.jpg"><i class="far fa-eye"></i></a>
-                                <img src="assets/img/portfolio/mma_portfolio_2.jpg" alt="portfolio">
+                                <a class="popup-image icon-btn" href="{{ asset('assets/img/portfolio/mma_portfolio_2.jpg') }}"><i class="far fa-eye"></i></a>
+                                <img src="{{ asset('assets/img/portfolio/mma_portfolio_2.jpg') }}" alt="portfolio">
                             </div>
                             <div class="portfolio-details">
                                 <h3 class="portfilio-card-title"><a href="project-details.html">Arte e Cultura</a></h3>
@@ -462,11 +434,11 @@
                     <div class="col-lg-4">
                         <div class="portfolio-card ">
                             <div class="portfolio-thumb">
-                                <a class="popup-image icon-btn" href="assets/img/portfolio/mma_portfolio_3.jpg"><i class="far fa-eye"></i></a>
-                                <img src="assets/img/portfolio/mma_portfolio_3.jpg" alt="portfolio">
+                                <a class="popup-image icon-btn" href="{{ asset('assets/img/portfolio/mma_portfolio_3.jpg') }}"><i class="far fa-eye"></i></a>
+                                <img src="{{ asset('assets/img/portfolio/mma_portfolio_3.jpg') }}" alt="portfolio">
                             </div>
                             <div class="portfolio-details">
-                                <h3 class="portfilio-card-title"><a href="project-details.html">Patrim�nio Cultural</a></h3>
+                                <h3 class="portfilio-card-title"><a href="project-details.html">Património Cultural</a></h3>
                                 <a href="project-details.html" class="btn btn-border btn-radius">
                                     VER COLEÇÃO
                                 </a>
@@ -490,7 +462,7 @@
                     </div>
                     <div class="col-lg-auto">
                         <div class="sec-btn wow custom-anim-right" data-wow-duration="1.5s" data-wow-delay="0.1s">
-                            <a href="event.html" class="btn">
+                            <a href="{{ route('eventos') }}" class="btn">
                                 VER TODOS OS EVENTOS   
                             </a>
                         </div>
@@ -499,60 +471,41 @@
             </div>
             <div class="container">
                 <div class="row gy-30">
+                    @forelse($upcomingEvents as $event)
                     <div class="col-lg-12">
                         <div class="event-card wow custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.1s">
                             <div class="event-card-date">
-                                <span class="date">08</span>
-                                June, 2024
+                                <span class="date">{{ \Carbon\Carbon::parse($event->start_date)->format('d') }}</span>
+                                {{ \Carbon\Carbon::parse($event->start_date)->locale('pt')->translatedFormat('F, Y') }}
                             </div>
                             <div class="event-card-details">
-                                <h3 class="event-card-title"><a href="event-details.html">Are There Specific Unique Events We Thats</a></h3>
-                                <span class="event-card-location">New York, Rodices120/32</span>
-                                <a href="event.html" class="btn">
-                                    GET TICKET 
+                                <h3 class="event-card-title"><a href="{{ route('evento.detalhes.bd', $event->id) }}">{{ $event->title }}</a></h3>
+                                <span class="event-card-location">
+                                    <i class="fas fa-map-marker-alt"></i> 
+                                    {{ $event->location ?? 'Museu Municipal de Alcanena' }}
+                                </span>
+                                <a href="{{ route('evento.detalhes.bd', $event->id) }}" class="btn">
+                                    SABER MAIS
                                 </a>
                             </div>
+                            @if($event->image)
                             <div class="event-card-thumb">
-                                <img src="assets/img/event/mma_event_1.jpg" alt="Evento Museu">
+                                <img src="{{ url('storage/' . $event->image) }}" alt="{{ $event->title }}">
                             </div>
+                            @else
+                            <div class="event-card-thumb">
+                                <img src="{{ asset('assets/img/event/mma_event_1.jpg') }}" alt="{{ $event->title }}">
+                            </div>
+                            @endif
                         </div>
                     </div>
+                    @empty
                     <div class="col-lg-12">
-                        <div class="event-card wow custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.1s">
-                            <div class="event-card-date">
-                                <span class="date">09</span>
-                                June, 2024
-                            </div>
-                            <div class="event-card-details">
-                                <h3 class="event-card-title"><a href="event-details.html">Carving Moment Capturing Emotions Nies</a></h3>
-                                <span class="event-card-location">New York, Rodices120/32</span>
-                                <a href="event.html" class="btn">
-                                    GET TICKET 
-                                </a>
-                            </div>
-                            <div class="event-card-thumb">
-                                <img src="assets/img/event/mma_event_2.jpg" alt="Evento Museu">
-                            </div>
+                        <div class="alert alert-info text-center">
+                            <p>Não há eventos programados no momento. Volte em breve para descobrir as nossas próximas exposições e atividades!</p>
                         </div>
                     </div>
-                    <div class="col-lg-12">
-                        <div class="event-card wow custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.1s">
-                            <div class="event-card-date">
-                                <span class="date">18</span>
-                                June, 2024
-                            </div>
-                            <div class="event-card-details">
-                                <h3 class="event-card-title"><a href="event-details.html">Where Vision Meets Line Craftsmanship</a></h3>
-                                <span class="event-card-location">New York, Rodices120/32</span>
-                                <a href="event.html" class="btn">
-                                    GET TICKET 
-                                </a>
-                            </div>
-                            <div class="event-card-thumb">
-                                <img src="assets/img/event/mma_event_3.jpg" alt="Evento Museu">
-                            </div>
-                        </div>
-                    </div>
+                    @endforelse
                 </div>
             </div>
         </div>
@@ -571,7 +524,7 @@
                         <div class="product-card wow custom-anim-top" data-wow-duration="1.5s" data-wow-delay="0.1s">
                             <div class="product-img">
                                 <span class="tag">Sculptor</span>
-                                <img src="assets/img/product/1-1.png" alt="Product Image">
+                                <img src="{{ asset('assets/img/product/1-1.png') }}" alt="Product Image">
                                 <div class="actions">
                                     <a href="cart.html" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
                                     <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
@@ -595,7 +548,7 @@
                         <div class="product-card wow custom-anim-top" data-wow-duration="1.5s" data-wow-delay="0.1s">
                             <div class="product-img">
                                 <span class="tag">Sculptor</span>
-                                <img src="assets/img/product/1-2.png" alt="Product Image">
+                                <img src="{{ asset('assets/img/product/1-2.png') }}" alt="Product Image">
                                 <div class="actions">
                                     <a href="cart.html" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
                                     <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
@@ -619,7 +572,7 @@
                         <div class="product-card wow custom-anim-top" data-wow-duration="1.5s" data-wow-delay="0.1s">
                             <div class="product-img">
                                 <span class="tag">Sculptor</span>
-                                <img src="assets/img/product/1-3.png" alt="Product Image">
+                                <img src="{{ asset('assets/img/product/1-3.png') }}" alt="Product Image">
                                 <div class="actions">
                                     <a href="cart.html" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
                                     <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
@@ -643,7 +596,7 @@
                         <div class="product-card wow custom-anim-top" data-wow-duration="1.5s" data-wow-delay="0.1s">
                             <div class="product-img">
                                 <span class="tag">Sculptor</span>
-                                <img src="assets/img/product/1-4.png" alt="Product Image">
+                                <img src="{{ asset('assets/img/product/1-4.png') }}" alt="Product Image">
                                 <div class="actions">
                                     <a href="cart.html" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
                                     <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i></a>
@@ -703,21 +656,20 @@
 
         <!--==============================
         <!--==============================
-            Footer Area
+            FooTerçarea
         ==============================-->
         <footer class="footer-wrapper footer-layout1 overflow-hidden">
             <div class="container">
                 <div class="footer-menu-area" style="padding: 60px 0 30px;">
                     <ul class="footer-menu-list" style="justify-content: center; display: flex; gap: 30px; flex-wrap: wrap; list-style: none; padding: 0; margin: 0;">
-                        <li><a href="index.html">INÍCIO</a></li>
-                        <li><a href="about.html">O MUSEU</a></li>
-                        <li><a href="project.html">GALERIA</a></li>
-                        <li><a href="event.html">EVENTOS</a></li>
-                        <li><a href="contact.html">CONTACTOS</a></li>
+                        <li><a href="{{ route('home') }}">INÍCIO</a></li>
+                        <li><a href="{{ route('sobre') }}">O MUSEU</a></li>
+                        <li><a href="{{ route('eventos') }}">EVENTOS</a></li>
+                        <li><a href="{{ route('contactos') }}">CONTACTOS</a></li>
                     </ul>
                 </div>
                 <div class="copyright-wrap text-center" style="padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.1);">
-                    <p class="copyright-text text-white mb-0">© 2025 Museu Municipal de Alcanena. Todos os Direitos Reservados.</p>
+                    <p class="copyright-text text-white mb-0">© {{ date('Y') }} Museu Municipal de Alcanena. Todos os Direitos Reservados.</p>
                 </div>
             </div>
         </footer>
@@ -740,39 +692,39 @@
     All Js File
     ============================== -->
     <!-- Jquery -->
-    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="{{ asset('assets/js/vendor/jquery-3.7.1.min.js') }}"></script>
     <!-- Slick Slider -->
-    <script src="assets/js/slick.min.js"></script>
+    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
     <!-- Bootstrap -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <!-- Magnific Popup -->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
     <!-- Counter Up -->
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
     <!-- Range Slider -->
-    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
     
     <!-- Isotope Filter -->
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
     
     <!-- ScrollTrigger -->
-    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="{{ asset('assets/js/ScrollTrigger.min.js') }}"></script>
     <!-- ScrollSmoother -->
-    <script src="assets/js/ScrollSmoother.min.js"></script>
+    <script src="{{ asset('assets/js/ScrollSmoother.min.js') }}"></script>
     <!-- ScrollToPlugin -->
-    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <script src="{{ asset('assets/js/ScrollToPlugin.min.js') }}"></script>
     <!-- SplitText -->
-    <script src="assets/js/SplitText.min.js"></script>
+    <script src="{{ asset('assets/js/SplitText.min.js') }}"></script>
     <!-- Gsap -->
-    <script src="assets/js/gsap.min.js"></script>
+    <script src="{{ asset('assets/js/gsap.min.js') }}"></script>
 
     <!-- WOW JS -->
-    <script src="assets/js/waypoints.js"></script>
-    <script src="assets/js/wow.js"></script>
+    <script src="{{ asset('assets/js/waypoints.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.js') }}"></script>
     
     <!-- Main Js File -->
-    <script src="assets/js/main.js"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>

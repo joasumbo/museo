@@ -44,45 +44,51 @@ class EventController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'required|string',
-            'short_description' => 'nullable|string|max:500',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
-            'location' => 'nullable|string|max:255',
-            'start_date' => 'required|date',
-            'end_date' => 'nullable|date|after_or_equal:start_date',
-            'start_time' => 'nullable|date_format:H:i',
-            'end_time' => 'nullable|date_format:H:i',
-            'type' => 'required|in:exhibition,workshop,conference,guided_tour,other',
-            'is_featured' => 'boolean',
-            'is_active' => 'boolean',
-            'is_free' => 'boolean',
-            'price' => 'nullable|numeric|min:0',
-            'max_capacity' => 'nullable|integer|min:1',
-        ], [
-            'title.required' => 'O título é obrigatório.',
-            'description.required' => 'A descrição é obrigatória.',
-            'start_date.required' => 'A data de início é obrigatória.',
-            'image.image' => 'O ficheiro deve ser uma imagem.',
-            'image.max' => 'A imagem não pode ter mais de 2MB.',
-        ]);
+        try {
+            $validated = $request->validate([
+                'title' => 'required|string|max:255',
+                'description' => 'required|string',
+                'short_description' => 'nullable|string|max:500',
+                'image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
+                'location' => 'nullable|string|max:255',
+                'start_date' => 'required|date',
+                'end_date' => 'nullable|date|after_or_equal:start_date',
+                'start_time' => 'nullable',
+                'end_time' => 'nullable',
+                'type' => 'required|in:exhibition,workshop,conference,guided_tour,other',
+                'is_featured' => 'nullable|boolean',
+                'is_active' => 'nullable|boolean',
+                'is_free' => 'nullable|boolean',
+                'price' => 'nullable|numeric|min:0',
+                'max_capacity' => 'nullable|integer|min:1',
+            ], [
+                'title.required' => 'O título é obrigatório.',
+                'description.required' => 'A descrição é obrigatória.',
+                'start_date.required' => 'A data de início é obrigatória.',
+                'image.image' => 'O ficheiro deve ser uma imagem.',
+                'image.max' => 'A imagem não pode ter mais de 2MB.',
+            ]);
 
-        $validated['slug'] = Str::slug($validated['title']);
-        $validated['created_by'] = Auth::id();
-        $validated['is_featured'] = $request->boolean('is_featured');
-        $validated['is_active'] = $request->boolean('is_active', true);
-        $validated['is_free'] = $request->boolean('is_free', true);
+            $validated['slug'] = Str::slug($validated['title']);
+            $validated['created_by'] = Auth::id();
+            $validated['is_featured'] = $request->has('is_featured') ? 1 : 0;
+            $validated['is_active'] = $request->has('is_active') ? 1 : 0;
+            $validated['is_free'] = $request->has('is_free') ? 1 : 0;
 
-        if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('events', 'public');
+            if ($request->hasFile('image')) {
+                $validated['image'] = $request->file('image')->store('events', 'public');
+            }
+
+            Event::create($validated);
+
+            return redirect()
+                ->route('admin.events.index')
+                ->with('success', 'Evento criado com sucesso!');
+        } catch (\Exception $e) {
+            return back()
+                ->withInput()
+                ->with('error', 'Erro ao criar evento: ' . $e->getMessage());
         }
-
-        Event::create($validated);
-
-        return redirect()
-            ->route('admin.events.index')
-            ->with('success', 'Evento criado com sucesso!');
     }
 
     public function show(Event $event)
